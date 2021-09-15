@@ -19,7 +19,7 @@ class TimerEntityTest: XCTestCase {
         
         let sut = TimerEntity(id: identifier, date: currentDate, duration: duration, passed: passed)
         
-        XCTAssertTrue(sut is TimerEntity)
+        XCTAssertTrue(sut.id == identifier)
     }
 
 }
