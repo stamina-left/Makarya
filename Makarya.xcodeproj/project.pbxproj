@@ -13,7 +13,19 @@
 		5E57465026B310C6000840D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57464E26B310C6000840D3 /* Main.storyboard */; };
 		5E57465226B310C7000840D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465126B310C7000840D3 /* Assets.xcassets */; };
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
+		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
+		5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EF712B526E2558F0094349F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E57463D26B310C6000840D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E57464426B310C6000840D3;
+			remoteInfo = Makarya;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		5E57465126B310C7000840D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E57465426B310C7000840D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityTest.swift; sourceTree = "<group>"; };
+		5EF712B026E2558F0094349F /* MakaryaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakaryaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF712B426E2558F0094349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5E57464226B310C6000840D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF712AD26E2558F0094349F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				5E57464726B310C6000840D3 /* Makarya */,
+				5EF712B126E2558F0094349F /* MakaryaTests */,
 				5E57464626B310C6000840D3 /* Products */,
+				5E86C5C026F1F1CC0053900F /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5E57464526B310C6000840D3 /* Makarya.app */,
+				5EF712B026E2558F0094349F /* MakaryaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +82,7 @@
 		5E57464726B310C6000840D3 /* Makarya */ = {
 			isa = PBXGroup;
 			children = (
+				5EF712AA26E23F4D0094349F /* Enterprises */,
 				5E57464826B310C6000840D3 /* AppDelegate.swift */,
 				5E57464A26B310C6000840D3 /* SceneDelegate.swift */,
 				5E57464C26B310C6000840D3 /* ViewController.swift */,
@@ -65,6 +92,46 @@
 				5E57465626B310C7000840D3 /* Info.plist */,
 			);
 			path = Makarya;
+			sourceTree = "<group>";
+		};
+		5EF712AA26E23F4D0094349F /* Enterprises */ = {
+			isa = PBXGroup;
+			children = (
+				5EF712AB26E2547A0094349F /* Entities */,
+			);
+			path = Enterprises;
+			sourceTree = "<group>";
+		};
+		5EF712AB26E2547A0094349F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5EF712B126E2558F0094349F /* MakaryaTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EF712BA26E2559A0094349F /* Enterprises */,
+				5EF712B426E2558F0094349F /* Info.plist */,
+			);
+			path = MakaryaTests;
+			sourceTree = "<group>";
+		};
+		5EF712BA26E2559A0094349F /* Enterprises */ = {
+			isa = PBXGroup;
+			children = (
+				5EF712BB26E255A40094349F /* Entities */,
+			);
+			path = Enterprises;
+			sourceTree = "<group>";
+		};
+		5EF712BB26E255A40094349F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +154,24 @@
 			productReference = 5E57464526B310C6000840D3 /* Makarya.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5EF712AF26E2558F0094349F /* MakaryaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF712B726E2558F0094349F /* Build configuration list for PBXNativeTarget "MakaryaTests" */;
+			buildPhases = (
+				5EF712AC26E2558F0094349F /* Sources */,
+				5EF712AD26E2558F0094349F /* Frameworks */,
+				5EF712AE26E2558F0094349F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EF712B626E2558F0094349F /* PBXTargetDependency */,
+			);
+			name = MakaryaTests;
+			productName = MakaryaTests;
+			productReference = 5EF712B026E2558F0094349F /* MakaryaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +183,11 @@
 				TargetAttributes = {
 					5E57464426B310C6000840D3 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					5EF712AF26E2558F0094349F = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+						TestTargetID = 5E57464426B310C6000840D3;
 					};
 				};
 			};
@@ -115,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				5E57464426B310C6000840D3 /* Makarya */,
+				5EF712AF26E2558F0094349F /* MakaryaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -126,7 +217,15 @@
 			files = (
 				5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */,
 				5E57465226B310C7000840D3 /* Assets.xcassets in Resources */,
+				5E86C5C126F1F1CC0053900F /* README.md in Resources */,
 				5E57465026B310C6000840D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EF712AE26E2558F0094349F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +242,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5EF712AC26E2558F0094349F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EF712B626E2558F0094349F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E57464426B310C6000840D3 /* Makarya */;
+			targetProxy = 5EF712B526E2558F0094349F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5E57464E26B310C6000840D3 /* Main.storyboard */ = {
@@ -319,6 +434,49 @@
 			};
 			name = Release;
 		};
+		5EF712B826E2558F0094349F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75KSF446RQ;
+				INFOPLIST_FILE = MakaryaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stamina-left.MakaryaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Makarya.app/Makarya";
+			};
+			name = Debug;
+		};
+		5EF712B926E2558F0094349F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75KSF446RQ;
+				INFOPLIST_FILE = MakaryaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stamina-left.MakaryaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Makarya.app/Makarya";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +494,15 @@
 			buildConfigurations = (
 				5E57465A26B310C7000840D3 /* Debug */,
 				5E57465B26B310C7000840D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF712B726E2558F0094349F /* Build configuration list for PBXNativeTarget "MakaryaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF712B826E2558F0094349F /* Debug */,
+				5EF712B926E2558F0094349F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
