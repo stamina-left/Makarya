@@ -14,6 +14,7 @@
 		5E57465226B310C7000840D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465126B310C7000840D3 /* Assets.xcassets */; };
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
+		5E86C5C326F1F54D0053900F /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86C5C226F1F54D0053900F /* TimerEntity.swift */; };
 		5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5E57465426B310C7000840D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5E86C5C226F1F54D0053900F /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
 		5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityTest.swift; sourceTree = "<group>"; };
 		5EF712B026E2558F0094349F /* MakaryaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakaryaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF712B426E2558F0094349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		5EF712AB26E2547A0094349F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				5E86C5C226F1F54D0053900F /* TimerEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				5E57464D26B310C6000840D3 /* ViewController.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
+				5E86C5C326F1F54D0053900F /* TimerEntity.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
