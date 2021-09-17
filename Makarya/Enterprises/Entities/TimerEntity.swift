@@ -14,11 +14,11 @@ final class TimerEntity: Equatable {
     }
     
     var id: UUID
-    var date: Calendar
+    var date: Date
     var duration: TimeInterval
     var passed: TimeInterval
     
-    init(id: UUID, date: Calendar, duration: TimeInterval, passed: TimeInterval) {
+    init(id: UUID, date: Date, duration: TimeInterval, passed: TimeInterval) {
         
         self.id = id
         self.date = date

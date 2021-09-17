@@ -13,7 +13,7 @@ class TimerEntityTest: XCTestCase {
     func testCheckTimerInput() {
         
         let identifier = UUID()
-        let currentDate = Calendar.current
+        let currentDate = Date()
         let duration = TimeInterval(1_450.0)
         let passed = TimeInterval(1_450.0)
         
