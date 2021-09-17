@@ -14,6 +14,7 @@ final class TimerEntity: Equatable {
     }
     
     enum TimerDateErrorEnum: Error {
+        case FutureDate
         case OverdueDate
     }
     
@@ -29,6 +30,8 @@ final class TimerEntity: Equatable {
             self.duration = duration
             self.passed = passed
             try self.date = validate(date)
+        } catch TimerDateErrorEnum.FutureDate {
+            self.date = nil
         } catch TimerDateErrorEnum.OverdueDate {
             self.date = nil
         } catch {
@@ -38,9 +41,8 @@ final class TimerEntity: Equatable {
     
     private func validate(_ date: Date) throws -> Date? {
         
-        guard date < Date() else {
-            throw TimerDateErrorEnum.OverdueDate
-        }
+        guard date < Date() else { throw TimerDateErrorEnum.OverdueDate }
+        guard date == Date() else { throw TimerDateErrorEnum.FutureDate }
         
         return date
     }

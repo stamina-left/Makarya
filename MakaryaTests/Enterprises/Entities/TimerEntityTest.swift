@@ -31,7 +31,7 @@ class TimerEntityTest: XCTestCase {
         
         let sut = TimerEntity(id: identifier, date: futureDate, duration: duration, passed: passed)
         
-        XCTAssertEqual(sut.date, nil, "Date is overdue.")
+        XCTAssertEqual(sut.date, nil, "Date is too soon.")
     }
     
     func testCheckTimerInput_withPastDate() {
@@ -43,7 +43,7 @@ class TimerEntityTest: XCTestCase {
         
         let sut = TimerEntity(id: identifier, date: pastDate, duration: duration, passed: passed)
         
-        XCTAssertEqual(sut.date, nil, "Date is early.")
+        XCTAssertEqual(sut.date, nil, "Date is overdue.")
     }
 
 }
