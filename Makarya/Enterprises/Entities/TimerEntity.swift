@@ -13,16 +13,35 @@ final class TimerEntity: Equatable {
         return lhs.id == rhs.id
     }
     
+    enum TimerDateErrorEnum: Error {
+        case DateTooSoon
+    }
+    
     var id: UUID
-    var date: Date
+    var date: Date?
     var duration: TimeInterval
     var passed: TimeInterval
     
     init(id: UUID, date: Date, duration: TimeInterval, passed: TimeInterval) {
         
-        self.id = id
-        self.date = date
-        self.duration = duration
-        self.passed = passed
+        do {
+            self.id = id
+            self.duration = duration
+            self.passed = passed
+            try self.date = validate(date)
+        } catch TimerDateErrorEnum.DateTooSoon {
+            self.date = nil
+        } catch {
+            print("Something went wrong.")
+        }
+    }
+    
+    private func validate(_ date: Date) throws -> Date? {
+        
+        guard date < Date() else {
+            throw TimerDateErrorEnum.DateTooSoon
+        }
+        
+        return date
     }
 }

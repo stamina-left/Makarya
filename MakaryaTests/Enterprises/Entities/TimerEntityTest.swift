@@ -21,5 +21,16 @@ class TimerEntityTest: XCTestCase {
         
         XCTAssertTrue(sut.id == identifier)
     }
-
+    
+    func testCheckTimerInput_withFutureDate() {
+        
+        let identifier = UUID()
+        let futureDate = Date().addingTimeInterval(10)
+        let duration = TimeInterval(1_450.0)
+        let passed = TimeInterval(1_450.0)
+        
+        let sut = TimerEntity(id: identifier, date: futureDate, duration: duration, passed: passed)
+        
+        XCTAssertEqual(sut.date, nil, "Date is overdue.")
+    }
 }
