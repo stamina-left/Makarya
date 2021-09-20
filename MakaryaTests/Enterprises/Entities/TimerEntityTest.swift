@@ -19,26 +19,16 @@ class TimerEntityTest: XCTestCase {
     
     func testCheckTimerInput_withFutureDate() {
         
-        let identifier = UUID()
         let futureDate = Date().addingTimeInterval(10)
-        let duration = TimeInterval(1_450.0)
-        let passed = TimeInterval(1_450.0)
         
-        let sut = try? TimerEntity(id: identifier, date: futureDate, duration: duration, passed: passed)
-        
-        XCTAssertEqual(sut?.date, nil, "Date is not too soon.")
+        XCTAssertEqual(makeSUT(date: futureDate), nil, "Date is not too soon.")
     }
     
     func testCheckTimerInput_withPastDate() {
         
-        let identifier = UUID()
         let pastDate = Date.yesterday
-        let duration = TimeInterval(1_450.0)
-        let passed = TimeInterval(1_450.0)
         
-        let sut = try? TimerEntity(id: identifier, date: pastDate, duration: duration, passed: passed)
-        
-        XCTAssertEqual(sut?.date, nil, "Date is not overdue.")
+        XCTAssertEqual(makeSUT(date: pastDate), nil, "Date is not overdue.")
     }
 }
 
