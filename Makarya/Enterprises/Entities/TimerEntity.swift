@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TimerEntity {
+final class TimerEntity: Equatable {
     
     var id: UUID
     var date: Date
@@ -28,5 +28,9 @@ final class TimerEntity {
         self.date = date
         self.duration = duration
         self.passed = passed
+    }
+    
+    static func == (lhs: TimerEntity, rhs: TimerEntity) -> Bool {
+        return lhs.id == rhs.id
     }
 }
