@@ -10,7 +10,7 @@ import Foundation
 final class TimerEntity {
     
     var id: UUID
-    var date: Date?
+    var date: Date
     var duration: TimeInterval
     var passed: TimeInterval
     
