@@ -12,14 +12,9 @@ class TimerEntityTest: XCTestCase {
 
     func testCheckTimerInput() {
         
-        let identifier = UUID()
         let currentDate = Date()
-        let duration = TimeInterval(1_450.0)
-        let passed = TimeInterval(1_450.0)
         
-        let sut = try? TimerEntity(id: identifier, date: currentDate, duration: duration, passed: passed)
-        
-        XCTAssertEqual(sut?.id, identifier, "ID is empty nor different with identifier \(identifier).")
+        XCTAssertNotEqual(makeSUT(date: currentDate), nil, "Invalid input.")
     }
     
     func testCheckTimerInput_withFutureDate() {
@@ -45,10 +40,21 @@ class TimerEntityTest: XCTestCase {
         
         XCTAssertEqual(sut?.date, nil, "Date is not overdue.")
     }
-    
 }
 
 // MARK: - Helper
+
+private func makeSUT(date: Date) -> TimerEntity? {
+    
+    let identifier = UUID()
+    let date = date
+    let duration = TimeInterval(1_450.0)
+    let passed = TimeInterval(1_450.0)
+    
+    let sut = try? TimerEntity(id: identifier, date: date, duration: duration, passed: passed)
+    
+    return sut
+}
 
 extension Date {
     
