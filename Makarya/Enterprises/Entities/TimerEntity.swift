@@ -14,27 +14,19 @@ final class TimerEntity {
     var duration: TimeInterval
     var passed: TimeInterval
     
-    init(id: UUID, date: Date, duration: TimeInterval, passed: TimeInterval) {
-        
-        do {
-            self.id = id
-            self.duration = duration
-            self.passed = passed
-            try self.date = validate(date)
-        } catch TimerDateErrorEnum.FutureDate {
-            self.date = nil
-        } catch TimerDateErrorEnum.OverdueDate {
-            self.date = nil
-        } catch {
-            print("Something went wrong.")
-        }
+    enum ValidationError: Error {
+        case FutureDate
+        case OverdueDate
     }
     
-    private func validate(_ date: Date) throws -> Date? {
+    init(id: UUID, date: Date, duration: TimeInterval, passed: TimeInterval) throws {
         
-        guard date < Date() else { throw TimerDateErrorEnum.OverdueDate }
-        guard date == Date() else { throw TimerDateErrorEnum.FutureDate }
+        guard date < Date() else { throw ValidationError.FutureDate }
+        guard Calendar.autoupdatingCurrent.isDateInToday(date) else { throw ValidationError.OverdueDate }
         
-        return date
+        self.id = id
+        self.date = date
+        self.duration = duration
+        self.passed = passed
     }
 }
