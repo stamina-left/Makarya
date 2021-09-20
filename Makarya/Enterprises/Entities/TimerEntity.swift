@@ -7,16 +7,7 @@
 
 import Foundation
 
-final class TimerEntity: Equatable {
-    
-    static func == (lhs: TimerEntity, rhs: TimerEntity) -> Bool {
-        return lhs.id == rhs.id
-    }
-    
-    enum TimerDateErrorEnum: Error {
-        case FutureDate
-        case OverdueDate
-    }
+final class TimerEntity {
     
     var id: UUID
     var date: Date?
