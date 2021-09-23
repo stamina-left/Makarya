@@ -115,25 +115,41 @@
 		5E5CA2DC26FCB28600FBEB6E /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				5E5CA2DD26FCB2CE00FBEB6E /* Application */,
 				5EF712BA26E2559A0094349F /* Enterprise */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
 		};
+		5E5CA2DD26FCB2CE00FBEB6E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5E5CA2DE26FCB2D700FBEB6E /* Interactor */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5E5CA2DE26FCB2D700FBEB6E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		5EF712AA26E23F4D0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
-				5EF712AB26E2547A0094349F /* Entities */,
+				5EF712AB26E2547A0094349F /* Entity */,
 			);
 			path = Enterprise;
 			sourceTree = "<group>";
 		};
-		5EF712AB26E2547A0094349F /* Entities */ = {
+		5EF712AB26E2547A0094349F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				5E86C5C226F1F54D0053900F /* TimerEntity.swift */,
 			);
-			path = Entities;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		5EF712B126E2558F0094349F /* MakaryaTests */ = {
@@ -148,17 +164,17 @@
 		5EF712BA26E2559A0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
-				5EF712BB26E255A40094349F /* Entities */,
+				5EF712BB26E255A40094349F /* Entity */,
 			);
 			path = Enterprise;
 			sourceTree = "<group>";
 		};
-		5EF712BB26E255A40094349F /* Entities */ = {
+		5EF712BB26E255A40094349F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */,
 			);
-			path = Entities;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
