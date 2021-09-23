@@ -14,21 +14,21 @@ class TimerEntityTest: XCTestCase {
         
         let currentDate = Date()
         
-        XCTAssertNotEqual(makeSUT(date: currentDate), nil, "Invalid input.")
+        XCTAssertNotNil(makeSUT(date: currentDate), "Invalid input.")
     }
     
     func testCheckTimerInput_withFutureDate() {
         
         let futureDate = Date().addingTimeInterval(10)
         
-        XCTAssertEqual(makeSUT(date: futureDate), nil, "Date is not too soon.")
+        XCTAssertNil(makeSUT(date: futureDate),  "Date is not too soon.")
     }
     
     func testCheckTimerInput_withPastDate() {
         
         let pastDate = Date.yesterday
         
-        XCTAssertEqual(makeSUT(date: pastDate), nil, "Date is not overdue.")
+        XCTAssertNil(makeSUT(date: pastDate), "Date is not overdue.")
     }
 }
 
