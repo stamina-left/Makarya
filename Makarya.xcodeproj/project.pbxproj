@@ -112,6 +112,14 @@
 			path = Rules;
 			sourceTree = "<group>";
 		};
+		5E5CA2DC26FCB28600FBEB6E /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				5EF712BA26E2559A0094349F /* Enterprise */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
 		5EF712AA26E23F4D0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,18 +139,18 @@
 		5EF712B126E2558F0094349F /* MakaryaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EF712BA26E2559A0094349F /* Enterprises */,
+				5E5CA2DC26FCB28600FBEB6E /* Rules */,
 				5EF712B426E2558F0094349F /* Info.plist */,
 			);
 			path = MakaryaTests;
 			sourceTree = "<group>";
 		};
-		5EF712BA26E2559A0094349F /* Enterprises */ = {
+		5EF712BA26E2559A0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
 				5EF712BB26E255A40094349F /* Entities */,
 			);
-			path = Enterprises;
+			path = Enterprise;
 			sourceTree = "<group>";
 		};
 		5EF712BB26E255A40094349F /* Entities */ = {
