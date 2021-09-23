@@ -7,17 +7,17 @@
 
 import Foundation
 
+enum ValidationError: Error {
+    case FutureDate
+    case OverdueDate
+}
+
 final class TimerEntity: Equatable {
     
     var id: UUID
     var date: Date
     var duration: TimeInterval
     var passed: TimeInterval
-    
-    enum ValidationError: Error {
-        case FutureDate
-        case OverdueDate
-    }
     
     init(id: UUID, date: Date, duration: TimeInterval, passed: TimeInterval) throws {
         
