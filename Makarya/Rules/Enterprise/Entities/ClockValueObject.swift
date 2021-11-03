@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct ClockValueObject {
-    <#fields#>
+struct ClockValueObject: Equatable {
+    let hours: Int
+    let minutes: Int
+    let seconds: Int
 }
