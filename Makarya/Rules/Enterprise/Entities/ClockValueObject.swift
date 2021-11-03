@@ -16,5 +16,9 @@ struct ClockValueObject: Equatable {
         guard 0...23 ~= hours else {
             return nil
         }
+        
+        guard 0...60 ~= minutes else {
+            return nil
+        }
     }
 }
