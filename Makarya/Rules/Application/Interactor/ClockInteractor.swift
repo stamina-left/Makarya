@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol ClockInteractor {
+    func parseClock(hours: Int, minutes: Int, seconds: Int) -> ClockValueObject
+}
