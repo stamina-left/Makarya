@@ -10,6 +10,15 @@ import XCTest
 
 class ClockInteractorTests: XCTestCase {
 
-    
+    func testParseClock_WhenInformationProvided_ClockIsParsed() {
+        
+        let hours = 0
+        let minutes = 30
+        let seconds = 0
+        
+        let sut = ClockInteractor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
+        
+        XCTAssertEqual(sut, ClockValueObject(hours: hours, minutes: minutes, seconds: seconds))
+    }
 
 }
