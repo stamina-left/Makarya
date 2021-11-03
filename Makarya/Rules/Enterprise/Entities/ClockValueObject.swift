@@ -13,6 +13,8 @@ struct ClockValueObject: Equatable {
     let seconds: Int
     
     init?(hours: Int, minutes: Int, seconds: Int) {
-        <#statements#>
+        guard 0...23 ~= hours else {
+            return nil
+        }
     }
 }
