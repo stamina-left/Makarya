@@ -16,7 +16,6 @@
 		5E5CA2E026FCB69800FBEB6E /* TimerInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E86C5C326F1F54D0053900F /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86C5C226F1F54D0053900F /* TimerEntity.swift */; };
-		5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractorTest.swift; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E86C5C226F1F54D0053900F /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
-		5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityTest.swift; sourceTree = "<group>"; };
 		5EF712B026E2558F0094349F /* MakaryaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakaryaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF712B426E2558F0094349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				5E5CA2DD26FCB2CE00FBEB6E /* Application */,
-				5EF712BA26E2559A0094349F /* Enterprise */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -162,22 +159,6 @@
 				5EF712B426E2558F0094349F /* Info.plist */,
 			);
 			path = MakaryaTests;
-			sourceTree = "<group>";
-		};
-		5EF712BA26E2559A0094349F /* Enterprise */ = {
-			isa = PBXGroup;
-			children = (
-				5EF712BB26E255A40094349F /* Entity */,
-			);
-			path = Enterprise;
-			sourceTree = "<group>";
-		};
-		5EF712BB26E255A40094349F /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5CA2E026FCB69800FBEB6E /* TimerInteractorTest.swift in Sources */,
-				5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
