@@ -99,6 +99,7 @@
 		5E5CA2DA26FCB18F00FBEB6E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5EC7ABC72732ED3400A6639F /* Interactor */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -132,6 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5EC7ABC72732ED3400A6639F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Interactor;
 			sourceTree = "<group>";
