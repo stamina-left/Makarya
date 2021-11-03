@@ -13,6 +13,7 @@
 		5E57465026B310C6000840D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57464E26B310C6000840D3 /* Main.storyboard */; };
 		5E57465226B310C7000840D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465126B310C7000840D3 /* Assets.xcassets */; };
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
+		5E5CA2E026FCB69800FBEB6E /* TimerInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E86C5C326F1F54D0053900F /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E86C5C226F1F54D0053900F /* TimerEntity.swift */; };
 		5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */; };
@@ -37,6 +38,7 @@
 		5E57465126B310C7000840D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E57465426B310C7000840D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractorTest.swift; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E86C5C226F1F54D0053900F /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
 		5EDB0B3E26F19C3100BE9C71 /* TimerEntityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityTest.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		5E5CA2DE26FCB2D700FBEB6E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				5E5CA2DF26FCB69800FBEB6E /* TimerInteractorTest.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -139,17 +142,17 @@
 		5EF712AA26E23F4D0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
-				5EF712AB26E2547A0094349F /* Entity */,
+				5EF712AB26E2547A0094349F /* Entities */,
 			);
 			path = Enterprise;
 			sourceTree = "<group>";
 		};
-		5EF712AB26E2547A0094349F /* Entity */ = {
+		5EF712AB26E2547A0094349F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				5E86C5C226F1F54D0053900F /* TimerEntity.swift */,
 			);
-			path = Entity;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		5EF712B126E2558F0094349F /* MakaryaTests */ = {
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5CA2E026FCB69800FBEB6E /* TimerInteractorTest.swift in Sources */,
 				5EDB0B3F26F19C3100BE9C71 /* TimerEntityTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
