@@ -15,6 +15,7 @@
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5EC7ABCC273309D000A6639F /* ClockInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCB273309D000A6639F /* ClockInteractorTests.swift */; };
+		5EC7ABCE27330F9F00A6639F /* ClockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5EC7ABCB273309D000A6639F /* ClockInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInteractorTests.swift; sourceTree = "<group>"; };
+		5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInteractor.swift; sourceTree = "<group>"; };
 		5EF712B026E2558F0094349F /* MakaryaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakaryaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF712B426E2558F0094349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 		5EC7ABC72732ED3400A6639F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				5E57464D26B310C6000840D3 /* ViewController.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
+				5EC7ABCE27330F9F00A6639F /* ClockInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
