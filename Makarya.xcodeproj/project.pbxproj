@@ -139,9 +139,17 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		5EBB88052732815E002F0C63 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ValueObjects;
+			sourceTree = "<group>";
+		};
 		5EF712AA26E23F4D0094349F /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
+				5EBB88052732815E002F0C63 /* ValueObjects */,
 				5EF712AB26E2547A0094349F /* Entities */,
 			);
 			path = Enterprise;
