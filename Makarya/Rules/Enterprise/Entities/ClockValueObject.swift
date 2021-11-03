@@ -11,4 +11,8 @@ struct ClockValueObject: Equatable {
     let hours: Int
     let minutes: Int
     let seconds: Int
+    
+    init?(hours: Int, minutes: Int, seconds: Int) {
+        <#statements#>
+    }
 }
