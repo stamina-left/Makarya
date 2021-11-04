@@ -15,6 +15,19 @@ final class DefaultClockInteractorValidator: ClockInteractorValidator {
     
     func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool {
         
+        guard 0...23 ~= hours else {
+            throw ClockInteractorError.invalidHours
+        }
+        
+        guard 0...60 ~= minutes else {
+            throw ClockInteractorError.invalidMinutes
+        }
+        
+        guard 0...60 ~= seconds else {
+            throw ClockInteractorError.invalidSeconds
+        }
+    
+        return true
     }
 }
 
