@@ -34,7 +34,9 @@ class ClockInteractorTests: XCTestCase {
         
         let interactor = ClockInteractorImplementation()
         
-        XCTAssertThrowsError(sut)
+        XCTAssertThrowsError(try interactor.parseClock(hours: hours, minutes: minutes, seconds: seconds), "Invalid information provided.") { error in
+            XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, DefaultClockInteractorValidator.ClockInteractorError.invalidHours)
+        }
     }
 
 }
