@@ -8,12 +8,12 @@
 import Foundation
 
 protocol ClockInteractor {
-    func parseClock(hours: Int, minutes: Int, seconds: Int) throws -> ClockValueObject?
+    func parseClock(hours: Int, minutes: Int, seconds: Int) throws -> ClockValueObject
 }
 
 final class ClockInteractorImplementation: ClockInteractor {
     
-    func parseClock(hours: Int, minutes: Int, seconds: Int) throws -> ClockValueObject? {
+    func parseClock(hours: Int, minutes: Int, seconds: Int) throws -> ClockValueObject {
         
         let _ = try DefaultClockInteractorValidator().validate(hours: hours, minutes: minutes, seconds: seconds)
         return ClockValueObject(hours: hours, minutes: minutes, seconds: seconds)
