@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol ClockInteractorValidator {
+    func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool
+}
