@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E552E692733BE7C002E0861 /* ClockInteractorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E552E682733BE7C002E0861 /* ClockInteractorValidator.swift */; };
 		5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464826B310C6000840D3 /* AppDelegate.swift */; };
 		5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464A26B310C6000840D3 /* SceneDelegate.swift */; };
 		5E57464D26B310C6000840D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464C26B310C6000840D3 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E552E682733BE7C002E0861 /* ClockInteractorValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInteractorValidator.swift; sourceTree = "<group>"; };
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E57464826B310C6000840D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E57464A26B310C6000840D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E552E672733BC6D002E0861 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				5E552E682733BE7C002E0861 /* ClockInteractorValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		5E57463C26B310C6000840D3 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 		5EC7ABC72732ED3400A6639F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				5E552E672733BC6D002E0861 /* Validators */,
 				5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */,
 			);
 			path = Interactor;
@@ -276,6 +287,7 @@
 			files = (
 				5E57464D26B310C6000840D3 /* ViewController.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
+				5E552E692733BE7C002E0861 /* ClockInteractorValidator.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 				5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */,
 				5EC7ABCE27330F9F00A6639F /* ClockInteractor.swift in Sources */,
