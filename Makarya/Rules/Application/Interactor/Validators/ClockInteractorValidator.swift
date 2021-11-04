@@ -14,6 +14,15 @@ protocol ClockInteractorValidator {
 final class DefaultClockInteractorValidator: ClockInteractorValidator {
     
     func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool {
-        <#code#>
+        
+    }
+}
+
+extension DefaultClockInteractorValidator {
+    
+    enum ClockInteractorError: Error {
+        case invalidHours
+        case invalidMinutes
+        case invalidSeconds
     }
 }
