@@ -26,6 +26,10 @@ class ClockInteractorTests: XCTestCase {
         let hours = 30
         let minutes = 0
         let seconds = 0
+        
+        let sut = ClockInteractorImplementation().parseClock(hours: hours, minutes: minutes, seconds: seconds)
+        
+        XCTAssertThrowsError(sut)
     }
 
 }
