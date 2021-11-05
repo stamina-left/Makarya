@@ -24,14 +24,13 @@ class ClockInteractorTests: XCTestCase {
     
     func testParseClock_WhenWrongInformationProvided_ReturnsAnError() {
         
-        let hours = 30
-        let minutes = 0
-        let seconds = 0
-        
-        let interactor = ClockInteractorImplementation()
-        
-        XCTAssertThrowsError(try interactor.parseClock(hours: hours, minutes: minutes, seconds: seconds), "Invalid information provided.") { error in
-            XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, DefaultClockInteractorValidator.ClockInteractorError.invalidHours)
+        callsMethod(hours: 30, minutes: 0, seconds: 0) { result in
+            switch result {
+            case .failure(let error):
+                XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, DefaultClockInteractorValidator.ClockInteractorError.invalidHours)
+            case .success(_):
+                XCTFail("Information should not be processed.")
+            }
         }
     }
 
