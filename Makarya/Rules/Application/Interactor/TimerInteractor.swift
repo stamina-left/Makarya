@@ -13,8 +13,12 @@ protocol TimerInteractor {
 
 final class TimerInteractorImplementation: TimerInteractor {
     
-    func setTimer(hours: Int, minutes: Int, seconds: Int) throws {
+    func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws {
         
+        let clockInteractor = ClockInteractorImplementation()
         
+        let clock = try clockInteractor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
+        
+        return TimerEntity(clock: clock, date: date)
     }
 }
