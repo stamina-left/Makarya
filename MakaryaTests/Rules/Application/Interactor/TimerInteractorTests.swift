@@ -17,6 +17,7 @@ class TimerInteractorTests: XCTestCase {
         let seconds = 0
         
         do {
+            
             let sut = try TimerInteractorImplementation().setTimer(hours: hours, minutes: minutes, seconds: seconds, date: Date())
             
             XCTAssertEqual(sut.state, .started)
@@ -30,6 +31,17 @@ class TimerInteractorTests: XCTestCase {
         let hours = 1
         let minutes = 0
         let seconds = 0
+        
+        do {
+            
+            let timer = try TimerInteractorImplementation().setTimer(hours: hours, minutes: minutes, seconds: seconds, date: Date())
+            
+            let sut = try TimerInteractorImplementation().changeTimerAction(timer: timer, with: "paused")
+            
+            XCTAssertEqual(sut.state, .paused)
+        } catch {
+            XCTFail()
+        }
     }
 
 }
