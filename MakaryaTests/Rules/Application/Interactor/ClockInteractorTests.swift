@@ -38,14 +38,14 @@ class ClockInteractorTests: XCTestCase {
 
 // MARK: - Helper
 
-func callsMethod(hours: Int, minutes: Int, seconds: Int, completionHandler: @escaping(Result<ClockValueObject, Error>) -> Void) {
+func callsMethod(hours: Int, minutes: Int, seconds: Int) throws -> ClockValueObject {
     
     let interactor = ClockInteractorImplementation()
     
     do {
         let result = try interactor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
-        completionHandler(.success(result))
+        return result
     } catch {
-        completionHandler(.failure(error))
+        throw error
     }
 }
