@@ -7,6 +7,16 @@
 
 import Foundation
 
-struct TimerEntity {
-    <#fields#>
+final class TimerEntity {
+    
+    typealias Clock = ClockValueObject
+    
+    let id = UUID()
+    let clock: Clock
+    let date: Date
+    
+    init(clock: Clock, date: Date) {
+        self.clock = clock
+        self.date = date
+    }
 }
