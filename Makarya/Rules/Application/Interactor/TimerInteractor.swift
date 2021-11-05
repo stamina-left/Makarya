@@ -19,6 +19,17 @@ final class TimerInteractorImplementation: TimerInteractor {
         
         let clock = try clockInteractor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
         
-        return TimerEntity(clock: clock, date: date)
+        let result = TimerEntity(clock: clock, date: date)
+        changeState(result)
+        
+        return result
+    }
+}
+
+extension TimerInteractorImplementation {
+    
+    private func changeState(_ timer: TimerEntity) {
+        
+        timer.state = .started
     }
 }
