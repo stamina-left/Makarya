@@ -17,6 +17,7 @@
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E96AAB42734DC81001F71F9 /* TimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB32734DC81001F71F9 /* TimerInteractorTests.swift */; };
 		5E96AAB62734E0CA001F71F9 /* TimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB52734E0CA001F71F9 /* TimerInteractor.swift */; };
+		5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */; };
 		5EC7ABCC273309D000A6639F /* ClockInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCB273309D000A6639F /* ClockInteractorTests.swift */; };
 		5EC7ABCE27330F9F00A6639F /* ClockInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */; };
 		5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */; };
@@ -45,6 +46,7 @@
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E96AAB32734DC81001F71F9 /* TimerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractorTests.swift; sourceTree = "<group>"; };
 		5E96AAB52734E0CA001F71F9 /* TimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractor.swift; sourceTree = "<group>"; };
+		5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
 		5EC7ABCB273309D000A6639F /* ClockInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInteractorTests.swift; sourceTree = "<group>"; };
 		5EC7ABCD27330F9F00A6639F /* ClockInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInteractor.swift; sourceTree = "<group>"; };
 		5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObject.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */,
+				5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				5E96AAB62734E0CA001F71F9 /* TimerInteractor.swift in Sources */,
 				5E57464D26B310C6000840D3 /* ViewController.swift in Sources */,
+				5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
 				5E552E692733BE7C002E0861 /* ClockInteractorValidator.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
