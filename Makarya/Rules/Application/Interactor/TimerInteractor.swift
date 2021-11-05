@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TimerInteractor {
-    func setTimer(hours: Int, minutes: Int, seconds: Int) throws
+    func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws
 }
 
 final class TimerInteractorImplementation: TimerInteractor {
