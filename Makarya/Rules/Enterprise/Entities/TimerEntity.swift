@@ -14,7 +14,7 @@ final class TimerEntity {
     let id = UUID()
     let clock: Clock
     let date: Date
-    let state: TimerState = .standby
+    var state: TimerState = .standby
     
     init(clock: Clock, date: Date) {
         self.clock = clock
