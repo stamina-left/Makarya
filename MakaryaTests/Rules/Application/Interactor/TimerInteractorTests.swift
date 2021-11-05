@@ -12,6 +12,13 @@ class TimerInteractorTests: XCTestCase {
 
     func testSetTimer_WhenInformationProvided_TimerInStartedState() {
        
+        let hours = 1
+        let minutes = 0
+        let seconds = 0
+        
+        let sut = TimerInteractor(hours: hours, minutes: minutes, seconds: seconds)
+        
+        XCTAssertEqual(sut.state, .started)
     }
 
 }
