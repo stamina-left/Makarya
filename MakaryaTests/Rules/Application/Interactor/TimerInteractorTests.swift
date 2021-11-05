@@ -24,5 +24,12 @@ class TimerInteractorTests: XCTestCase {
             XCTFail()
         }
     }
+    
+    func testSetTimer_WhenActionProvided_TimerChangedIntoCorrectState() {
+        
+        let hours = 1
+        let minutes = 0
+        let seconds = 0
+    }
 
 }
