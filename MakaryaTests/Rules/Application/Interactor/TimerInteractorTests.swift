@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Makarya
 
 class TimerInteractorTests: XCTestCase {
 
