@@ -9,6 +9,7 @@ import Foundation
 
 protocol TimerInteractor {
     func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity
+    func changeTimerAction(timer: TimerEntity, with action: String) throws -> TimerEntity
 }
 
 final class TimerInteractorImplementation: TimerInteractor {
@@ -23,6 +24,10 @@ final class TimerInteractorImplementation: TimerInteractor {
         changeState(result)
         
         return result
+    }
+    
+    func changeTimerAction(timer: TimerEntity, with action: String) throws -> TimerEntity {
+        <#code#>
     }
 }
 
