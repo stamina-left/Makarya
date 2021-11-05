@@ -12,17 +12,13 @@ class ClockInteractorTests: XCTestCase {
 
     func testParseClock_WhenInformationProvided_ClockIsParsed() {
         
-        let hours = 0
-        let minutes = 30
-        let seconds = 0
-        let interactor = ClockInteractorImplementation()
-          
-        do {
-            let sut = try interactor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
-            
-            XCTAssertEqual(sut, ClockValueObject(hours: hours, minutes: minutes, seconds: seconds))
-        } catch {
-            XCTFail()
+        callsMethod(hours: 0, minutes: 30, seconds: 0) { result in
+            switch result {
+            case .success(let sut):
+                XCTAssertEqual(sut, ClockValueObject(hours: 0, minutes: 30, seconds: 0))
+            case .failure(let error):
+                XCTFail("\(error.localizedDescription)")
+            }
         }
     }
     
