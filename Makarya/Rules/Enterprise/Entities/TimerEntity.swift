@@ -14,9 +14,18 @@ final class TimerEntity {
     let id = UUID()
     let clock: Clock
     let date: Date
+    let state: TimerState = .standby
     
     init(clock: Clock, date: Date) {
         self.clock = clock
         self.date = date
+    }
+    
+    enum TimerState {
+        case standby
+        case started
+        case paused
+        case stopped
+        case finished
     }
 }
