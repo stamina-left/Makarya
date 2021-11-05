@@ -22,13 +22,14 @@ class ClockInteractorTests: XCTestCase {
     
     func testParseClock_WhenWrongInformationProvided_ReturnsAnError() {
         
-        callsMethod(hours: 30, minutes: 0, seconds: 0) { result in
-            switch result {
-            case .failure(let error):
-                XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, DefaultClockInteractorValidator.ClockInteractorError.invalidHours)
-            case .success(_):
-                XCTFail("Information should not be processed.")
-            }
+        XCTAssertThrowsError(try callsMethod(hours: 30, minutes: 0, seconds: 0), "Invalid hours.") { error in
+            XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, .invalidHours)
+        }
+        XCTAssertThrowsError(try callsMethod(hours: 0, minutes: 90, seconds: 0), "Invalid minutes") { error in
+            XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, .invalidMinutes)
+        }
+        XCTAssertThrowsError(try callsMethod(hours: 0, minutes: 0, seconds: 100), "Invalid seconds") { error in
+            XCTAssertEqual(error as? DefaultClockInteractorValidator.ClockInteractorError, .invalidSeconds)
         }
     }
 
