@@ -10,6 +10,8 @@ import XCTest
 
 class TimerInteractorTests: XCTestCase {
 
-    
+    func testSetTimer_WhenInformationProvided_TimerInStartedState() {
+       
+    }
 
 }
