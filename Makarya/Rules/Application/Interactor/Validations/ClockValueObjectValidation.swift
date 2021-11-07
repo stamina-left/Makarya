@@ -1,5 +1,5 @@
 //
-//  ClockInteractorValidator.swift
+//  ClockValueObjectValidation.swift
 //  Makarya
 //
 //  Created by Albert Pangestu on 04/11/21.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ClockInteractorValidator {
+protocol ClockValueObjectValidation {
     func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool
 }
 
-final class DefaultClockInteractorValidator: ClockInteractorValidator {
+final class DefaultClockInteractorValidator: ClockValueObjectValidation {
     
     func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool {
         
