@@ -27,7 +27,9 @@ final class TimerInteractorImplementation: TimerInteractor {
     }
     
     func changeTimerAction(timer: TimerEntity, with action: String) throws -> TimerEntity {
-        <#code#>
+        
+        changeState(timer)
+        return timer
     }
 }
 
