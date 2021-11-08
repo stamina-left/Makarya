@@ -113,7 +113,7 @@
 		5E5CA2DA26FCB18F00FBEB6E /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				5EC7ABC72732ED3400A6639F /* Interactor */,
+				5EC7ABC72732ED3400A6639F /* TimerInteractor */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -151,13 +151,13 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		5EC7ABC72732ED3400A6639F /* Interactor */ = {
+		5EC7ABC72732ED3400A6639F /* TimerInteractor */ = {
 			isa = PBXGroup;
 			children = (
 				5E552E672733BC6D002E0861 /* Validations */,
 				5E96AAB52734E0CA001F71F9 /* TimerInteractor.swift */,
 			);
-			path = Interactor;
+			path = TimerInteractor;
 			sourceTree = "<group>";
 		};
 		5EF712AA26E23F4D0094349F /* Enterprise */ = {
