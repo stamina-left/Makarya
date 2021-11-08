@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */; };
+		5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C814273965E700920848 /* TimerResponseModel.swift */; };
 		5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */; };
 		5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464826B310C6000840D3 /* AppDelegate.swift */; };
 		5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464A26B310C6000840D3 /* SceneDelegate.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRequestModel.swift; sourceTree = "<group>"; };
+		5E25C814273965E700920848 /* TimerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerResponseModel.swift; sourceTree = "<group>"; };
 		5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObjectValidation.swift; sourceTree = "<group>"; };
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E57464826B310C6000840D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E0CC0E82739511400F04773 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */,
+				5E25C814273965E700920848 /* TimerResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5E552E672733BC6D002E0861 /* Validations */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 		5EC7ABC72732ED3400A6639F /* TimerInteractor */ = {
 			isa = PBXGroup;
 			children = (
+				5E0CC0E82739511400F04773 /* Models */,
 				5E552E672733BC6D002E0861 /* Validations */,
 				5E96AAB52734E0CA001F71F9 /* TimerInteractor.swift */,
 			);
@@ -293,6 +307,8 @@
 				5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
 				5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */,
+				5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */,
+				5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 				5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */,
 			);
