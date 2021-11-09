@@ -11,4 +11,5 @@ struct TimerRequestModel {
     let hours: Int
     let minutes: Int
     let seconds: Int
+    let date: Date
 }
