@@ -8,13 +8,13 @@
 import Foundation
 
 protocol SetTimerInteractor {
-    func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity
+    func execute(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity
     func changeTimerAction(timer: TimerEntity, with action: String) throws -> TimerEntity
 }
 
 final class TimerInteractorImplementation: SetTimerInteractor {
     
-    func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity {
+    func execute(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity {
         
         let clockInteractor = ClockInteractorImplementation()
         
