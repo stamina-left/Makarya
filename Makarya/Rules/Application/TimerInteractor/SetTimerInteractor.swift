@@ -1,5 +1,5 @@
 //
-//  TimerInteractor.swift
+//  SetTimerInteractor.swift
 //  Makarya
 //
 //  Created by Albert Pangestu on 05/11/21.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol TimerInteractor {
+protocol SetTimerInteractor {
     func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity
     func changeTimerAction(timer: TimerEntity, with action: String) throws -> TimerEntity
 }
 
-final class TimerInteractorImplementation: TimerInteractor {
+final class TimerInteractorImplementation: SetTimerInteractor {
     
     func setTimer(hours: Int, minutes: Int, seconds: Int, date: Date) throws -> TimerEntity {
         
