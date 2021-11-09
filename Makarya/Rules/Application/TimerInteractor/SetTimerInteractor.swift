@@ -13,6 +13,12 @@ protocol SetTimerInteractor {
 
 final class TimerInteractorImplementation: SetTimerInteractor {
     
+    private let dataAccess: TimerDataAccess
+    
+    init(dataAccess: TimerDataAccess) {
+        self.dataAccess = dataAccess
+    }
+    
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
         
         let clockInteractor = ClockInteractorImplementation()
