@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct TimerResponseModel {
+    let hours: Int
+    let minutes: Int
+    let seconds: Int
+}
