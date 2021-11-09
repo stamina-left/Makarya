@@ -25,11 +25,3 @@ final class TimerInteractorImplementation: SetTimerInteractor {
         return result
     }
 }
-
-extension TimerInteractorImplementation {
-    
-    private func changeState(_ timer: TimerEntity) {
-        
-        timer.state = .started
-    }
-}
