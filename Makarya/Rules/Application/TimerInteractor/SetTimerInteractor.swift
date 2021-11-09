@@ -13,10 +13,10 @@ protocol SetTimerInteractor {
 
 final class TimerInteractorImplementation: SetTimerInteractor {
     
-    private let dataAccess: TimerDataAccess
+    private let gateway: TimerEntityGateway
     
-    init(dataAccess: TimerDataAccess) {
-        self.dataAccess = dataAccess
+    init(gateway: TimerEntityGateway) {
+        self.gateway = gateway
     }
     
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
