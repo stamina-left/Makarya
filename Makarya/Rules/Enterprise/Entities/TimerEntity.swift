@@ -21,10 +21,10 @@ final class TimerEntity {
         self.date = date
     }
     
-    enum TimerState {
-        case started
-        case paused
-        case stopped
-        case finished
+    enum TimerState: String {
+        case started = "started"
+        case paused = "paused"
+        case stopped = "stopped"
+        case finished = "finished"
     }
 }
