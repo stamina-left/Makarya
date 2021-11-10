@@ -14,14 +14,9 @@ class TimerInteractorTests: XCTestCase {
        
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
         
-        do {
+        let sut = SetTimerInteractorImplementation().execute(requestParameter: request)
             
-            let sut = try SetTimerInteractorImplementation().execute(requestParameter: request)
-            
-            XCTAssertEqual(sut.state, "started")
-        } catch {
-            XCTFail()
-        }
+        XCTAssertEqual(sut.state, "started")
     }
     
     func testSetTimer_WhenActionProvided_TimerChangedIntoCorrectState() {
