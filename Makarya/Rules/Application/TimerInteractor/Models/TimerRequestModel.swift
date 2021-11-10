@@ -14,3 +14,10 @@ struct TimerRequestModel {
     let date: Date
     let state: String
 }
+
+enum TimerStateRequestModel: String {
+    case started = "started"
+    case paused = "paused"
+    case stopped = "stopped"
+    case finished = "finished"
+}
