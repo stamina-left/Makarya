@@ -19,7 +19,7 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
         let timer = TimerEntity(clock: clock, date: requestParameter.date)
         
         guard let requestState = TimerEntity.TimerState(rawValue: requestParameter.state) else {
-            throw fatalError("Invalid")
+            return TimerResponseModel(timer: timer)
         }
         timer.state = requestState
         
