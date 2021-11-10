@@ -7,3 +7,13 @@
 
 import Foundation
 
+protocol ChangeTimerActionInteractor {
+    func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel
+}
+
+final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteractor {
+    
+    func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
+        
+    }
+}
