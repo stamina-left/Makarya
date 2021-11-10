@@ -15,9 +15,20 @@ struct TimerRequestModel {
     let state: TimerStateRequestModel
 }
 
-enum TimerStateRequestModel: String {
-    case started = "started"
-    case paused = "paused"
-    case stopped = "stopped"
-    case finished = "finished"
+extension TimerRequestModel {
+    
+    enum TimerStateRequestModel: String {
+        case started = "started"
+        case paused = "paused"
+        case stopped = "stopped"
+        case finished = "finished"
+        
+        static func ==(left: TimerStateRequestModel, right: TimerEntity.TimerState) -> Bool {
+            return left.rawValue == right.rawValue
+        }
+        
+        static func ==(left: TimerEntity.TimerState, right: TimerStateRequestModel) -> Bool {
+            return left.rawValue == right.rawValue
+        }
+    }
 }
