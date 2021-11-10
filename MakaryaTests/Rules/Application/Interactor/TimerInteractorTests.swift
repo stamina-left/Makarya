@@ -30,7 +30,7 @@ class TimerInteractorTests: XCTestCase {
         
         do {
             
-            let timer = try ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
+            let sut = try ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
             
             XCTAssertEqual(sut.state, "paused")
         } catch {
