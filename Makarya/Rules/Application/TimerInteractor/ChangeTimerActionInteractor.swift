@@ -8,12 +8,12 @@
 import Foundation
 
 protocol ChangeTimerActionInteractor {
-    func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel
+    func execute(requestParameter: TimerRequestModel) -> TimerResponseModel
 }
 
 final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteractor {
     
-    func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
+    func execute(requestParameter: TimerRequestModel) -> TimerResponseModel {
         
         let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
         let timer = TimerEntity(clock: clock, date: requestParameter.date)

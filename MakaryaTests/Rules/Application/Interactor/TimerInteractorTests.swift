@@ -28,14 +28,9 @@ class TimerInteractorTests: XCTestCase {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
         
-        do {
+        let sut = ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
             
-            let sut = try ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
-            
-            XCTAssertEqual(sut.state, "paused")
-        } catch {
-            XCTFail()
-        }
+        XCTAssertEqual(sut.state, "paused")
     }
 
 }
