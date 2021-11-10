@@ -26,8 +26,7 @@ final class TimerInteractorImplementation: SetTimerInteractor {
         
         // run gateway
         
-        // return a response
-        
+        let result = TimerResponseModel(timer: timer)
         return result
     }
 }
