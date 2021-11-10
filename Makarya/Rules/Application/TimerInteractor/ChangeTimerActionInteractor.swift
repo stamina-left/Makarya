@@ -15,5 +15,8 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
     
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
         
+        let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
+        let timer = TimerEntity(clock: clock, date: requestParameter.date)
+        
     }
 }
