@@ -12,9 +12,7 @@ class TimerInteractorTests: XCTestCase {
 
     func testSetTimer_WhenInformationProvided_TimerInStartedState() {
        
-        let hours = 1
-        let minutes = 0
-        let seconds = 0
+        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date())
         
         do {
             
