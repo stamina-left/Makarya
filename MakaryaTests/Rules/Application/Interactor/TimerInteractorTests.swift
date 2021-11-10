@@ -26,20 +26,16 @@ class TimerInteractorTests: XCTestCase {
     
     func testSetTimer_WhenActionProvided_TimerChangedIntoCorrectState() {
         
-//        let hours = 1
-//        let minutes = 0
-//        let seconds = 0
-//        
-//        do {
-//            
-//            let timer = try SetTimerInteractorImplementation().execute(hours: hours, minutes: minutes, seconds: seconds, date: Date())
-//            
-//            let sut = try SetTimerInteractorImplementation().changeTimerAction(timer: timer, with: "paused")
-//            
-//            XCTAssertEqual(sut.state, .paused)
-//        } catch {
-//            XCTFail()
-//        }
+        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
+        
+        do {
+            
+            let timer = try ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
+            
+            XCTAssertEqual(sut.state, "paused")
+        } catch {
+            XCTFail()
+        }
     }
 
 }
