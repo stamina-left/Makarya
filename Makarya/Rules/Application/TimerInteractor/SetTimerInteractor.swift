@@ -16,7 +16,7 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
         
         let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
-        let timer = TimerEntity(clock: clock, date: Date())
+        let timer = TimerEntity(clock: clock, date: requestParameter.date)
         
         let result = TimerResponseModel(timer: timer)
         return result
