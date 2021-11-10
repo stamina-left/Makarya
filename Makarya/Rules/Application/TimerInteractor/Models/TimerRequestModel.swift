@@ -12,7 +12,7 @@ struct TimerRequestModel {
     let minutes: Int
     let seconds: Int
     let date: Date
-    let state: String
+    let state: TimerStateRequestModel
 }
 
 enum TimerStateRequestModel: String {
