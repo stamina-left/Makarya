@@ -13,20 +13,19 @@ protocol SetTimerInteractor {
 
 final class TimerInteractorImplementation: SetTimerInteractor {
     
-    private let gateway: TimerEntityGateway
+    private let gateway: SaveTimerEntityGateway
     
-    init(gateway: TimerEntityGateway) {
+    init(gateway: SaveTimerEntityGateway) {
         self.gateway = gateway
     }
     
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
         
-        let clockInteractor = ClockInteractorImplementation()
+        // validate request
         
-        let clock = try clockInteractor.parseClock(hours: hours, minutes: minutes, seconds: seconds)
+        // run gateway
         
-        let result = TimerEntity(clock: clock, date: date)
-        changeState(result)
+        // return a response
         
         return result
     }
