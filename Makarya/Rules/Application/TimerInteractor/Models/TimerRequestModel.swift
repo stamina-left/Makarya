@@ -13,3 +13,12 @@ struct TimerRequestModel {
     let seconds: Int
     let date: Date
 }
+
+// MARK: - Validation
+
+extension TimerRequestModel {
+    
+    private func validate() {
+        
+    }
+}
