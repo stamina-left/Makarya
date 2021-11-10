@@ -11,4 +11,10 @@ struct TimerResponseModel {
     let hours: Int
     let minutes: Int
     let seconds: Int
+    
+    init(timer: TimerEntity) {
+        self.hours = timer.clock.hours
+        self.minutes = timer.clock.minutes
+        self.seconds = timer.clock.seconds
+    }
 }
