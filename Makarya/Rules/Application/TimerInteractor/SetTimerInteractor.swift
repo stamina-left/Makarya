@@ -21,7 +21,8 @@ final class TimerInteractorImplementation: SetTimerInteractor {
     
     func execute(requestParameter: TimerRequestModel) throws -> TimerResponseModel {
         
-        // validate request
+        let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
+        let timer = TimerEntity(clock: clock, date: Date())
         
         // run gateway
         
