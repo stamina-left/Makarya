@@ -27,7 +27,7 @@ final class ClockValueObjectValidation {
     }
 }
 
-extension DefaultClockInteractorValidator {
+extension ClockValueObjectValidation {
     
     enum ClockInteractorError: Error {
         case invalidHours
