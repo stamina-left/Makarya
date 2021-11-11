@@ -10,6 +10,7 @@
 		5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */; };
 		5E0FFB94273C277000B35B45 /* ChangeTimerActionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FFB93273C277000B35B45 /* ChangeTimerActionInteractor.swift */; };
 		5E1338F6273BC19C00F40E0B /* TimerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1338F5273BC19C00F40E0B /* TimerDatabase.swift */; };
+		5E1E7B7E273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */; };
 		5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C814273965E700920848 /* TimerResponseModel.swift */; };
 		5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */; };
 		5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464826B310C6000840D3 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRequestModel.swift; sourceTree = "<group>"; };
 		5E0FFB93273C277000B35B45 /* ChangeTimerActionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimerActionInteractor.swift; sourceTree = "<group>"; };
 		5E1338F5273BC19C00F40E0B /* TimerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDatabase.swift; sourceTree = "<group>"; };
+		5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimerActionInteractorTests.swift; sourceTree = "<group>"; };
 		5E25C814273965E700920848 /* TimerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerResponseModel.swift; sourceTree = "<group>"; };
 		5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObjectValidation.swift; sourceTree = "<group>"; };
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */,
+				5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1E7B7E273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift in Sources */,
 				5E96AAB42734DC81001F71F9 /* SetTimerInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
