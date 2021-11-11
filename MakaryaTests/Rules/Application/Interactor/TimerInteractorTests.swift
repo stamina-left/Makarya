@@ -22,6 +22,7 @@ class TimerInteractorTests: XCTestCase {
                 XCTAssertEqual(timer.state, "started")
             case .failure(let error):
                 XCTFail("Should return a timer, reason: \(error.localizedDescription)")
+            }
         }
     }
     
