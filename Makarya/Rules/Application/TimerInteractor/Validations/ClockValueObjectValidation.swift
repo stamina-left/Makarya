@@ -7,11 +7,7 @@
 
 import Foundation
 
-protocol ClockValueObjectValidation {
-    func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool
-}
-
-final class DefaultClockInteractorValidator: ClockValueObjectValidation {
+final class ClockValueObjectValidation {
     
     func validate(hours: Int, minutes: Int, seconds: Int) throws -> Bool {
         
