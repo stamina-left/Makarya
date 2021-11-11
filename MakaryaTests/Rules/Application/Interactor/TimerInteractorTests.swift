@@ -27,7 +27,7 @@ class TimerInteractorTests: XCTestCase {
         
         sut.execute(requestParameter: request) { result in
             switch result {
-            case .success(let timer):
+            case .success(_):
                 XCTFail("It should fail instead of returns an object.")
             case .failed(let error):
                 XCTAssertEqual(error as? TimerInteractorError, .invalidHour)
