@@ -14,9 +14,15 @@ class TimerInteractorTests: XCTestCase {
        
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
         
-        let sut = SetTimerInteractorImplementation().execute(requestParameter: request)
-            
-        XCTAssertEqual(sut.state, "started")
+        let sut = SetTimerInteractorImplementation()
+        
+        sut.execute(requestParameter: request) { result in
+            switch result {
+            case .success(let timer):
+                XCTAssertEqual(timer.state, "started")
+            case .failure(let error):
+                XCTFail("Should return a timer, reason: \(error.localizedDescription)")
+        }
     }
     
     func testSetTimer_WhenWrongInformationProvided_ReturnsAnError() {
