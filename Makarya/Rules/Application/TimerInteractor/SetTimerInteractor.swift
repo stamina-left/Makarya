@@ -17,14 +17,14 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
         
         do {
             try ClockValueObjectValidation().validate(requestParameter)
+            
+            let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
+            let timer = TimerEntity(clock: clock, date: requestParameter.date)
+            
+            let result = TimerResponseModel(timer: timer)
+            completion(.success(result))
         } catch {
             completion(.failure(error))
         }
-        
-        let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
-        let timer = TimerEntity(clock: clock, date: requestParameter.date)
-        
-        let result = TimerResponseModel(timer: timer)
-        completion(.success(result))
     }
 }
