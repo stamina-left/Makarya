@@ -13,12 +13,18 @@ protocol SetTimerInteractor {
 
 final class SetTimerInteractorImplementation: SetTimerInteractor {
     
-    func execute(requestParameter: TimerRequestModel) -> TimerResponseModel {
+    func execute(requestParameter: TimerRequestModel, completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
+        
+        do {
+            try ClockValueObjectValidation().validate(requestParameter)
+        } catch {
+            completion(.failure(error))
+        }
         
         let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
         let timer = TimerEntity(clock: clock, date: requestParameter.date)
         
         let result = TimerResponseModel(timer: timer)
-        return result
+        completion(.success(result))
     }
 }
