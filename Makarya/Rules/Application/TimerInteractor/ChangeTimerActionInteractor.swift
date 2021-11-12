@@ -15,6 +15,8 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
     
     func execute(requestParameter: TimerRequestModel, completion: @escaping(Result<TimerResponseModel, Error>) -> Void) {
         
+        // validate first
+        
         let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
         let timer = TimerEntity(clock: clock, date: requestParameter.date)
         
