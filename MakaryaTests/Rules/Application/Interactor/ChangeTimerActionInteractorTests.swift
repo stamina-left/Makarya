@@ -18,5 +18,21 @@ class ChangeTimerActionInteractorTests: XCTestCase {
             
         XCTAssertEqual(sut.state, "paused")
     }
+    
+    func testChangeTimerAction_WhenWrongActionProvided_ReturnsAnError() {
+        
+        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "undying")
+        
+        let sut = ChangeTimerActionInteractorImplementation()
+        
+        sut.execute(requestParameter: request) { result in
+            switch result {
+            case .success(_):
+                XCTFail("It should fail instead of returns an object.")
+            case .failure(let error):
+                XCTAssertEqual(error as? TimerEntityValidation.TimerEntityError, .invalidState)
+            }
+        }
+    }
 
 }
