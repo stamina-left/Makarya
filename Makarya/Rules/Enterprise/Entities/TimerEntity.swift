@@ -21,7 +21,7 @@ final class TimerEntity {
         self.date = date
     }
     
-    enum TimerState: String {
+    enum TimerState: String, CaseIterable {
         case started = "started"
         case paused = "paused"
         case stopped = "stopped"
