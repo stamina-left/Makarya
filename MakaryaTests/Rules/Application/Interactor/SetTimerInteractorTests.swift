@@ -37,7 +37,7 @@ class SetTimerInteractorTests: XCTestCase {
             case .success(_):
                 XCTFail("It should fail instead of returns an object.")
             case .failure(let error):
-                XCTAssertEqual(error as? ClockValueObjectValidation.ClockInteractorError, .invalidHours)
+                XCTAssertEqual(error as? ClockValueObjectValidation.ClockValueObjectError, .invalidHours)
             }
         }
         

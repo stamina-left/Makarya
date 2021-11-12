@@ -12,22 +12,22 @@ final class ClockValueObjectValidation {
     func validate(_ timer: TimerRequestModel) throws {
         
         guard 0...23 ~= timer.hours else {
-            throw ClockInteractorError.invalidHours
+            throw ClockValueObjectError.invalidHours
         }
         
         guard 0...60 ~= timer.minutes else {
-            throw ClockInteractorError.invalidMinutes
+            throw ClockValueObjectError.invalidMinutes
         }
         
         guard 0...60 ~= timer.seconds else {
-            throw ClockInteractorError.invalidSeconds
+            throw ClockValueObjectError.invalidSeconds
         }
     }
 }
 
 extension ClockValueObjectValidation {
     
-    enum ClockInteractorError: Error {
+    enum ClockValueObjectError: Error {
         case invalidHours
         case invalidMinutes
         case invalidSeconds
