@@ -14,9 +14,16 @@ class ChangeTimerActionInteractorTests: XCTestCase {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
         
-        let sut = ChangeTimerActionInteractorImplementation().execute(requestParameter: request)
+        let sut = ChangeTimerActionInteractorImplementation()
             
-        XCTAssertEqual(sut.state, "paused")
+        sut.execute(requestParameter: request) { result in
+            switch result {
+            case .success(let timer):
+                XCTAssertEqual(timer.state, "paused")
+            case .failure(let error):
+                XCTFail("Should return a timer response model, reason \(error.localizedDescription)")
+            }
+        }
     }
     
     func testChangeTimerAction_WhenWrongActionProvided_ReturnsAnError() {
