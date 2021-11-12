@@ -10,7 +10,7 @@ import XCTest
 
 class ChangeTimerActionInteractorTests: XCTestCase {
 
-    func testSetTimer_WhenActionProvided_TimerChangedIntoCorrectState() {
+    func testChangeTimerAction_WhenActionProvided_TimerChangedIntoCorrectState() {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
         
