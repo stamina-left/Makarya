@@ -19,7 +19,6 @@
 		5E57465026B310C6000840D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57464E26B310C6000840D3 /* Main.storyboard */; };
 		5E57465226B310C7000840D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465126B310C7000840D3 /* Assets.xcassets */; };
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
-		5E645A9A273B006500CDDF78 /* SaveTimerEntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E645A99273B006500CDDF78 /* SaveTimerEntityGateway.swift */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E96AAB42734DC81001F71F9 /* SetTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */; };
 		5E96AAB62734E0CA001F71F9 /* SetTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB52734E0CA001F71F9 /* SetTimerInteractor.swift */; };
@@ -53,7 +52,6 @@
 		5E57465126B310C7000840D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E57465426B310C7000840D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E645A99273B006500CDDF78 /* SaveTimerEntityGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTimerEntityGateway.swift; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerInteractorTests.swift; sourceTree = "<group>"; };
 		5E96AAB52734E0CA001F71F9 /* SetTimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerInteractor.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 		5E1338F3273BBE4500F40E0B /* Datas */ = {
 			isa = PBXGroup;
 			children = (
-				5E645A98273AF67900CDDF78 /* Gateways */,
 				5E1338F4273BBE5000F40E0B /* Databases */,
 			);
 			path = Datas;
@@ -192,14 +189,6 @@
 				5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		5E645A98273AF67900CDDF78 /* Gateways */ = {
-			isa = PBXGroup;
-			children = (
-				5E645A99273B006500CDDF78 /* SaveTimerEntityGateway.swift */,
-			);
-			path = Gateways;
 			sourceTree = "<group>";
 		};
 		5EC7ABC72732ED3400A6639F /* TimerInteractor */ = {
@@ -344,7 +333,6 @@
 				5E96AAB62734E0CA001F71F9 /* SetTimerInteractor.swift in Sources */,
 				5E57464D26B310C6000840D3 /* ViewController.swift in Sources */,
 				5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */,
-				5E645A9A273B006500CDDF78 /* SaveTimerEntityGateway.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
 				5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */,
 				5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */,

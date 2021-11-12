@@ -40,6 +40,5 @@ class SetTimerInteractorTests: XCTestCase {
                 XCTAssertEqual(error as? ClockValueObjectValidation.ClockValueObjectError, .invalidHours)
             }
         }
-        
     }
 }
