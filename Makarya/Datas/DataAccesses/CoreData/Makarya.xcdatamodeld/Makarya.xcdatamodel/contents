@@ -5,7 +5,12 @@
         <attribute name="minutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="seconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Timer" representedClassName="Timer" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="state" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <elements>
-        <element name="Clock" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Clock" positionX="-90.67657470703125" positionY="-41.64187622070312" width="128" height="88"/>
+        <element name="Timer" positionX="111.5405883789062" positionY="-16.4022216796875" width="128" height="73"/>
     </elements>
 </model>
