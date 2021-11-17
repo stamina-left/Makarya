@@ -10,10 +10,3 @@ import Foundation
 protocol SaveTimerDataAccess {
     func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void)
 }
-
-final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
-    
-    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
-        <#code#>
-    }
-}
