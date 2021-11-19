@@ -18,6 +18,9 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
             completion(.failure(CoreDataError.failedManagedContext))
         }
         
+        // Create Clock from CoreData
+        let clock = Clock(context: managedObjectContext)
+        
         // Create Timer from CoreData
         let timer = Timer(context: managedObjectContext)
     }
