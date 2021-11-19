@@ -6,12 +6,19 @@
 //
 
 import Foundation
+import CoreData
 
 final class CoreDataManager {
     
     // MARK: - Properties
     
     private let modelName: String
+    
+    // MARK: - Core Data Stack
+    
+    private(set) lazy var managedObjectContext: NSManagedObjectContext = {}()
+    private lazy var managedObjectModel: NSManagedObjectModel = {}()
+    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {}()
     
     // MARK: - Initialization
     
