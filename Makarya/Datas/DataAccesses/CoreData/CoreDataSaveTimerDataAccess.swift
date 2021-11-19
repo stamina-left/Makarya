@@ -37,6 +37,8 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         } catch {
             completion(.failure(error))
         }
+        
+        // TO-DO: Convert Timer CoreData model into TimerEntity.
         completion(.success(request))
     }
     
