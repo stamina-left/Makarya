@@ -15,7 +15,7 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
     func execute(request: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         guard let managedObjectContext = managedObjectContext else {
-            completion(.failure(CoreDataError.failedManagedContext))
+            return completion(.failure(CoreDataError.failedManagedContext))
         }
         
         // Create Clock from CoreData
@@ -30,6 +30,13 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         timer.ofClock = clock
         timer.date = Date()
         timer.state = request.state.rawValue
+        
+        do {
+            // Save Timer into Persistence Store
+            try managedObjectContext.save()
+        } catch {
+            completion(.failure(error))
+        }
     }
     
     enum CoreDataError: Error {
