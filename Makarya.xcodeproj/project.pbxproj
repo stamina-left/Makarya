@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */; };
 		5E0FFB94273C277000B35B45 /* ChangeTimerActionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FFB93273C277000B35B45 /* ChangeTimerActionInteractor.swift */; };
-		5E1338F6273BC19C00F40E0B /* TimerDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1338F5273BC19C00F40E0B /* TimerDatabase.swift */; };
 		5E1541EB2740FD0400EC2886 /* SaveTimerDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1541EA2740FD0400EC2886 /* SaveTimerDataAccess.swift */; };
 		5E1E7B7E273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */; };
 		5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C814273965E700920848 /* TimerResponseModel.swift */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRequestModel.swift; sourceTree = "<group>"; };
 		5E0FFB93273C277000B35B45 /* ChangeTimerActionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimerActionInteractor.swift; sourceTree = "<group>"; };
-		5E1338F5273BC19C00F40E0B /* TimerDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDatabase.swift; sourceTree = "<group>"; };
 		5E1541EA2740FD0400EC2886 /* SaveTimerDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTimerDataAccess.swift; sourceTree = "<group>"; };
 		5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimerActionInteractorTests.swift; sourceTree = "<group>"; };
 		5E25C814273965E700920848 /* TimerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerResponseModel.swift; sourceTree = "<group>"; };
@@ -99,17 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				5E8CC446273ED37B00112BD5 /* DataAccesses */,
-				5E1338F4273BBE5000F40E0B /* Databases */,
 			);
 			path = Datas;
-			sourceTree = "<group>";
-		};
-		5E1338F4273BBE5000F40E0B /* Databases */ = {
-			isa = PBXGroup;
-			children = (
-				5E1338F5273BC19C00F40E0B /* TimerDatabase.swift */,
-			);
-			path = Databases;
 			sourceTree = "<group>";
 		};
 		5E2CD03A27454591001ACC78 /* CoreData */ = {
@@ -368,7 +357,6 @@
 				5E0FFB94273C277000B35B45 /* ChangeTimerActionInteractor.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 				5ED52C18273E68EE003427AA /* TimerEntityValidation.swift in Sources */,
-				5E1338F6273BC19C00F40E0B /* TimerDatabase.swift in Sources */,
 				5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
