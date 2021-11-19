@@ -18,6 +18,8 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
             completion(.failure(CoreDataError.failedManagedContext))
         }
         
+        // Create Timer from CoreData
+        let timer = Timer(context: managedObjectContext)
     }
     
     enum CoreDataError: Error {
