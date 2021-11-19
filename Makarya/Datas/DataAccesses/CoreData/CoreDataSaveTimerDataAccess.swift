@@ -20,9 +20,9 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         
         // Create Clock from CoreData
         let clock = Clock(context: managedObjectContext)
-        clock.hours = timer.clock.hours
-        clock.minutes = timer.clock.minutes
-        clock.seconds = timer.clock.seconds
+        clock.hours = Int16(timer.clock.hours)
+        clock.minutes = Int16(timer.clock.minutes)
+        clock.seconds = Int16(timer.clock.seconds)
         
         // Create Timer from CoreData
         let timer = Timer(context: managedObjectContext)
