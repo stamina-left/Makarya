@@ -9,7 +9,7 @@
     <entity name="Timer" representedClassName="Timer" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="state" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="state" attributeType="String"/>
         <relationship name="ofClock" maxCount="1" deletionRule="Nullify" destinationEntity="Clock" inverseName="timer" inverseEntity="Clock"/>
     </entity>
     <elements>
