@@ -8,12 +8,20 @@
 import Foundation
 
 protocol SetTimerInteractor {
-    func execute(requestParameter: TimerRequestModel, completion: @escaping (Result<TimerResponseModel, Error>) -> Void)
+    func execute(requestParameter: TimerRequestModel,
+                 completion: @escaping (Result<TimerResponseModel, Error>) -> Void)
 }
 
 final class SetTimerInteractorImplementation: SetTimerInteractor {
     
-    func execute(requestParameter: TimerRequestModel, completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
+    private let dataAccess: SaveTimerDataAccess
+    
+    init(dataAccess: SaveTimerDataAccess) {
+        self.dataAccess = dataAccess
+    }
+    
+    func execute(requestParameter: TimerRequestModel,
+                 completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
         
         do {
             try ClockValueObjectValidation().validate(requestParameter)
