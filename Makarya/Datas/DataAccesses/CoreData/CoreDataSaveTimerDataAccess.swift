@@ -14,5 +14,13 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
     
     func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
+        guard let managedObjectContext = managedObjectContext else {
+            completion(.failure(CoreDataError.failedManagedContext))
+        }
+        
+    }
+    
+    enum CoreDataError: Error {
+        case failedManagedContext
     }
 }
