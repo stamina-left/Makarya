@@ -26,6 +26,10 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         
         // Create Timer from CoreData
         let timer = Timer(context: managedObjectContext)
+        timer.id = request.id
+        timer.ofClock = clock
+        timer.date = Date()
+        timer.state = request.state.rawValue
     }
     
     enum CoreDataError: Error {
