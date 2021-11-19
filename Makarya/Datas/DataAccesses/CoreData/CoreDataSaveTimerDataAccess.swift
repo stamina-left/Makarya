@@ -37,6 +37,7 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         } catch {
             completion(.failure(error))
         }
+        completion(.success(request))
     }
     
     enum CoreDataError: Error {
