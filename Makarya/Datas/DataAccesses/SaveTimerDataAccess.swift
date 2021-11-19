@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SaveTimerDataAccess {
-    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void)
+    func execute(request: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void)
 }

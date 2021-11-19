@@ -12,7 +12,7 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
+    func execute(request: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         guard let managedObjectContext = managedObjectContext else {
             completion(.failure(CoreDataError.failedManagedContext))
@@ -20,9 +20,9 @@ final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
         
         // Create Clock from CoreData
         let clock = Clock(context: managedObjectContext)
-        clock.hours = Int16(timer.clock.hours)
-        clock.minutes = Int16(timer.clock.minutes)
-        clock.seconds = Int16(timer.clock.seconds)
+        clock.hours = Int16(request.clock.hours)
+        clock.minutes = Int16(request.clock.minutes)
+        clock.seconds = Int16(request.clock.seconds)
         
         // Create Timer from CoreData
         let timer = Timer(context: managedObjectContext)
