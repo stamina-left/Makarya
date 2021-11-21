@@ -1,5 +1,5 @@
 //
-//  CoreDataSaveTimerDataAccess.swift
+//  CoreDataSaveTimerRepository.swift
 //  Makarya
 //
 //  Created by Albert Pangestu on 17/11/21.
@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataSaveTimerDataAccess: SaveTimerDataAccess {
+final class CoreDataSaveTimerRepository: SaveTimerRepository {
     
     var managedObjectContext: NSManagedObjectContext?
     

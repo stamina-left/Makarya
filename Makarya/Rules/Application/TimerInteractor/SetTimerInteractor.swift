@@ -14,9 +14,9 @@ protocol SetTimerInteractor {
 
 final class SetTimerInteractorImplementation: SetTimerInteractor {
     
-    private let dataAccess: SaveTimerDataAccess
+    private let dataAccess: SaveTimerRepository
     
-    init(dataAccess: SaveTimerDataAccess) {
+    init(dataAccess: SaveTimerRepository) {
         self.dataAccess = dataAccess
     }
     
