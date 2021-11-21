@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SaveTimerRepository {
-    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void)
+    func execute(timer: TimerEntity,
+                 completion: @escaping (Result<Void, Error>) -> Void)
 }

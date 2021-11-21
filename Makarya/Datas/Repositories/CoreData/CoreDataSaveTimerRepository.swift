@@ -12,7 +12,8 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
+    func execute(timer: TimerEntity,
+                 completion: @escaping (Result<Void, Error>) -> Void) {
         
         guard let managedObjectContext = managedObjectContext else {
             return completion(.failure(CoreDataError.failedManagedContext))
@@ -39,7 +40,7 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         }
         
         // TO-DO: Convert Timer CoreData model into TimerEntity.
-        completion(.success(timer))
+        completion(.success(()))
     }
     
     enum CoreDataError: Error {
