@@ -12,7 +12,7 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    func execute(request: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
+    func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         guard let managedObjectContext = managedObjectContext else {
             return completion(.failure(CoreDataError.failedManagedContext))
@@ -20,16 +20,16 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         
         // Create Clock from CoreData
         let cdClock = CoreDataClock(context: managedObjectContext)
-        cdClock.hours = Int16(request.clock.hours)
-        cdClock.minutes = Int16(request.clock.minutes)
-        cdClock.seconds = Int16(request.clock.seconds)
+        cdClock.hours = Int16(timer.clock.hours)
+        cdClock.minutes = Int16(timer.clock.minutes)
+        cdClock.seconds = Int16(timer.clock.seconds)
         
         // Create Timer from CoreData
         let cdTimer = CoreDataTimer(context: managedObjectContext)
-        cdTimer.id = request.id
+        cdTimer.id = timer.id
         cdTimer.ofClock = cdClock
         cdTimer.date = Date()
-        cdTimer.state = request.state.rawValue
+        cdTimer.state = timer.state.rawValue
         
         do {
             // Save Timer into Persistence Store
@@ -39,7 +39,7 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         }
         
         // TO-DO: Convert Timer CoreData model into TimerEntity.
-        completion(.success(request))
+        completion(.success(timer))
     }
     
     enum CoreDataError: Error {

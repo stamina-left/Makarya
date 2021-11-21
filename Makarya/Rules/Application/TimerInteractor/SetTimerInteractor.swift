@@ -29,7 +29,7 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
             let clockRequest = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
             let timerRequest = TimerEntity(clock: clockRequest, date: requestParameter.date)
             
-            dataAccess.execute(request: timerRequest) { result in
+            dataAccess.execute(timer: timerRequest) { result in
                 switch result {
                 case .success(let timer):
                     let response = TimerResponseModel(timer: timer)
