@@ -19,13 +19,13 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         }
         
         // Create Clock from CoreData
-        let clock = Clock(context: managedObjectContext)
+        let clock = CoreDataClock(context: managedObjectContext)
         clock.hours = Int16(request.clock.hours)
         clock.minutes = Int16(request.clock.minutes)
         clock.seconds = Int16(request.clock.seconds)
         
         // Create Timer from CoreData
-        let timer = Timer(context: managedObjectContext)
+        let timer = CoreDataTimer(context: managedObjectContext)
         timer.id = request.id
         timer.ofClock = clock
         timer.date = Date()

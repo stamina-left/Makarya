@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Clock" representedClassName="Clock" syncable="YES" codeGenerationType="class">
+    <entity name="CoreDataClock" representedClassName="CoreDataClock" syncable="YES" codeGenerationType="class">
         <attribute name="hours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="minutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="seconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="timer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timer" inverseName="ofClock" inverseEntity="Timer"/>
+        <relationship name="timer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreDataTimer" inverseName="ofClock" inverseEntity="CoreDataTimer"/>
     </entity>
-    <entity name="Timer" representedClassName="Timer" syncable="YES" codeGenerationType="class">
+    <entity name="CoreDataTimer" representedClassName="CoreDataTimer" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="state" attributeType="String"/>
-        <relationship name="ofClock" maxCount="1" deletionRule="Nullify" destinationEntity="Clock" inverseName="timer" inverseEntity="Clock"/>
+        <relationship name="ofClock" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataClock" inverseName="timer" inverseEntity="CoreDataClock"/>
     </entity>
     <elements>
-        <element name="Clock" positionX="-90.67657470703125" positionY="-41.64187622070312" width="128" height="89"/>
-        <element name="Timer" positionX="111.5405883789062" positionY="-16.4022216796875" width="128" height="89"/>
+        <element name="CoreDataClock" positionX="-90.67657470703125" positionY="-41.64187622070312" width="128" height="89"/>
+        <element name="CoreDataTimer" positionX="111.5405883789062" positionY="-16.4022216796875" width="128" height="89"/>
     </elements>
 </model>
