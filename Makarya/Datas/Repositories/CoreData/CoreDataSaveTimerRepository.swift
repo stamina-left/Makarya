@@ -19,17 +19,17 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         }
         
         // Create Clock from CoreData
-        let clock = CoreDataClock(context: managedObjectContext)
-        clock.hours = Int16(request.clock.hours)
-        clock.minutes = Int16(request.clock.minutes)
-        clock.seconds = Int16(request.clock.seconds)
+        let cdClock = CoreDataClock(context: managedObjectContext)
+        cdClock.hours = Int16(request.clock.hours)
+        cdClock.minutes = Int16(request.clock.minutes)
+        cdClock.seconds = Int16(request.clock.seconds)
         
         // Create Timer from CoreData
-        let timer = CoreDataTimer(context: managedObjectContext)
-        timer.id = request.id
-        timer.ofClock = clock
-        timer.date = Date()
-        timer.state = request.state.rawValue
+        let cdTimer = CoreDataTimer(context: managedObjectContext)
+        cdTimer.id = request.id
+        cdTimer.ofClock = cdClock
+        cdTimer.date = Date()
+        cdTimer.state = request.state.rawValue
         
         do {
             // Save Timer into Persistence Store
