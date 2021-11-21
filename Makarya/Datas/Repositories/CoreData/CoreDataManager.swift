@@ -35,7 +35,11 @@ final class CoreDataManager {
         
         return managedObjectModel
     }()
-    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {}()
+    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        
+        
+    }()
     
     // MARK: - Initialization
     
