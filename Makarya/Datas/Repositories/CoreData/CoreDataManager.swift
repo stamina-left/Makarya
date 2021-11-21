@@ -45,6 +45,17 @@ final class CoreDataManager {
                                                     in: .userDomainMask)[0]
         
         let persistentStoreURL = documentsDirectoryURL.appendingPathComponent(storeName)
+        
+        do {
+            try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                                              configurationName: nil,
+                                                              at: persistentStoreURL,
+                                                              options: nil)
+        } catch {
+            fatalError("Unable to Load Persistent Store")
+        }
+        
+        return persistentStoreCoordinator
     }()
     
     // MARK: - Initialization
