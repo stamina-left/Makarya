@@ -31,7 +31,7 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
             
             dataAccess.execute(timer: timerRequest) { result in
                 switch result {
-                case .success(let timer):
+                case .success():
                     let response = TimerResponseModel(timer: timer)
                     completion(.success(response))
                 case .failure(let error):
