@@ -12,7 +12,7 @@ public class CoreDataManager {
     
     // MARK: - Properties
     
-    private let modelName: String
+    public let modelName: String
     
     // MARK: - Core Data Stack
     
@@ -23,7 +23,7 @@ public class CoreDataManager {
         
         return managedObjectContext
     }()
-    private lazy var managedObjectModel: NSManagedObjectModel = {
+    public lazy var managedObjectModel: NSManagedObjectModel = {
         guard let modelURL = Bundle.main.url(forResource: self.modelName,
                                              withExtension: "momd") else {
             fatalError("Unable to Find Data Model")
