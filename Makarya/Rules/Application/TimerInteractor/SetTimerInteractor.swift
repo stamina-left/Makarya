@@ -14,10 +14,10 @@ protocol SetTimerInteractor {
 
 final class SetTimerInteractorImplementation: SetTimerInteractor {
     
-    private let dataAccess: SaveTimerRepository
+    private let repository: SaveTimerRepository
     
-    init(dataAccess: SaveTimerRepository) {
-        self.dataAccess = dataAccess
+    init(repository: SaveTimerRepository) {
+        self.repository = repository
     }
     
     func execute(requestParameter: TimerRequestModel,
@@ -29,7 +29,7 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
             let clockRequest = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
             let timer = TimerEntity(clock: clockRequest, date: requestParameter.date)
             
-            dataAccess.execute(timer: timer) { result in
+            repository.execute(timer: timer) { result in
                 switch result {
                 case .success():
                     let response = TimerResponseModel(timer: timer)
