@@ -24,7 +24,7 @@ public class CoreDataManager {
         
         return managedObjectContext
     }()
-    public lazy var managedObjectModel: NSManagedObjectModel = {
+    private lazy var managedObjectModel: NSManagedObjectModel = {
         guard let modelURL = Bundle.main.url(forResource: self.modelName,
                                              withExtension: "momd") else {
             fatalError("Unable to Find Data Model")
