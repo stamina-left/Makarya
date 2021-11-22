@@ -16,6 +16,7 @@ class TestCoreDataManager {
         let persistentDescription = NSPersistentStoreDescription()
         persistentDescription.type = NSInMemoryStoreType
         
+        let cdManager = CoreDataManager(modelName: "Makarya")
         
     }
 
