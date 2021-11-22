@@ -60,7 +60,7 @@ public class CoreDataManager {
     
     // MARK: - Initialization
     
-    init(modelName: String) {
+    public init(modelName: String) {
         self.modelName = modelName
     }
 }
