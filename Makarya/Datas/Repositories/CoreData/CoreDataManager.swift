@@ -12,7 +12,8 @@ public class CoreDataManager {
     
     // MARK: - Properties
     
-    public let modelName: String
+    private let modelName: String
+    private let storeType: String
     
     // MARK: - Core Data Stack
     
@@ -47,7 +48,7 @@ public class CoreDataManager {
         let persistentStoreURL = documentsDirectoryURL.appendingPathComponent(storeName)
         
         do {
-            try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+            try persistentStoreCoordinator.addPersistentStore(ofType: self.storeType,
                                                               configurationName: nil,
                                                               at: persistentStoreURL,
                                                               options: nil)
@@ -60,7 +61,8 @@ public class CoreDataManager {
     
     // MARK: - Initialization
     
-    public init(modelName: String) {
+    public init(modelName: String, storeType: String) {
         self.modelName = modelName
+        self.storeType = storeType
     }
 }
