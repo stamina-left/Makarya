@@ -13,11 +13,8 @@ class TestCoreDataManager {
 
     func create() -> CoreDataManager {
         
-        let persistentDescription = NSPersistentStoreDescription()
-        persistentDescription.type = NSInMemoryStoreType
-        
-        let cdManager = CoreDataManager(modelName: "Makarya")
-        
+        return CoreDataManager(modelName: "Makarya",
+                                        storeType: NSInMemoryStoreType)
     }
 
 }
