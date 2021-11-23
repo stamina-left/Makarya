@@ -10,23 +10,23 @@ import CoreData
 
 final class CoreDataSaveTimerRepository: SaveTimerRepository {
     
-    var managedObjectContext: NSManagedObjectContext?
+    private let coreDataManager: CoreDataManager
+    
+    init(coreDataManager: CoreDataManager = CoreDataManager(modelName: "CoreDataTimer", storeType: NSSQLiteStoreType)) {
+        self.coreDataManager = coreDataManager
+    }
     
     func execute(timer: TimerEntity,
                  completion: @escaping (Result<Void, Error>) -> Void) {
         
-        guard let managedObjectContext = managedObjectContext else {
-            return completion(.failure(CoreDataError.failedManagedContext))
-        }
-        
         // Create Clock from CoreData
-        let cdClock = CoreDataClock(context: managedObjectContext)
+        let cdClock = CoreDataClock(context: coreDataManager.managedObjectContext)
         cdClock.hours = Int16(timer.clock.hours)
         cdClock.minutes = Int16(timer.clock.minutes)
         cdClock.seconds = Int16(timer.clock.seconds)
         
         // Create Timer from CoreData
-        let cdTimer = CoreDataTimer(context: managedObjectContext)
+        let cdTimer = CoreDataTimer(context: coreDataManager.managedObjectContext)
         cdTimer.id = timer.id
         cdTimer.ofClock = cdClock
         cdTimer.date = Date()
@@ -34,7 +34,7 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
         
         do {
             // Save Timer into Persistence Store
-            try managedObjectContext.save()
+            try coreDataManager.managedObjectContext.save()
         } catch {
             completion(.failure(error))
         }
