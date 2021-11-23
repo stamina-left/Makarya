@@ -13,11 +13,8 @@ class SetTimerInteractorTests: XCTestCase {
     func testSetTimer_WhenInformationProvided_TimerInStartedState() {
        
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
-        let repository = CoreDataSaveTimerRepository(coreDataManager: TestCoreDataManager().create())
         
-        let sut = SetTimerInteractorImplementation(repository: repository)
-        
-        sut.execute(requestParameter: request) { result in
+        attemptSetTimer(request: request) { result in
             switch result {
             case .success(let timer):
                 XCTAssertEqual(timer.state, "started")
@@ -30,11 +27,8 @@ class SetTimerInteractorTests: XCTestCase {
     func testSetTimer_WhenWrongInformationProvided_ReturnsAnError() {
         
         let request = TimerRequestModel(hours: 27, minutes: 0, seconds: 0, date: Date(), state: "")
-        let repository = CoreDataSaveTimerRepository(coreDataManager: TestCoreDataManager().create())
         
-        let sut = SetTimerInteractorImplementation(repository: repository)
-        
-        sut.execute(requestParameter: request) { result in
+        attemptSetTimer(request: request) { result in
             switch result {
             case .success(_):
                 XCTFail("It should fail instead of returns an object.")
