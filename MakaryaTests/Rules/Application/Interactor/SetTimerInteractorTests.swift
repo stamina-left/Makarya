@@ -13,7 +13,7 @@ class SetTimerInteractorTests: XCTestCase {
     func testSetTimer_WhenInformationProvided_TimerInStartedState() {
        
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
-        let repository = CoreDataSaveTimerRepository()
+        let repository = CoreDataSaveTimerRepository(coreDataManager: TestCoreDataManager().create())
         
         let sut = SetTimerInteractorImplementation(repository: repository)
         
@@ -30,7 +30,7 @@ class SetTimerInteractorTests: XCTestCase {
     func testSetTimer_WhenWrongInformationProvided_ReturnsAnError() {
         
         let request = TimerRequestModel(hours: 27, minutes: 0, seconds: 0, date: Date(), state: "")
-        let repository = CoreDataSaveTimerRepository()
+        let repository = CoreDataSaveTimerRepository(coreDataManager: TestCoreDataManager().create())
         
         let sut = SetTimerInteractorImplementation(repository: repository)
         
