@@ -13,11 +13,8 @@ class ChangeTimerActionInteractorTests: XCTestCase {
     func testChangeTimerAction_WhenActionProvided_TimerChangedIntoCorrectState() {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
-        
-        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
-        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
             
-        sut.execute(requestParameter: request) { result in
+        attemptChangeTimer(request: request) { result in
             switch result {
             case .success(let timer):
                 XCTAssertEqual(timer.state, "paused")
@@ -31,10 +28,7 @@ class ChangeTimerActionInteractorTests: XCTestCase {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "undying")
         
-        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
-        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
-        
-        sut.execute(requestParameter: request) { result in
+        attemptChangeTimer(request: request) { result in
             switch result {
             case .success(_):
                 XCTFail("It should fail instead of returns an object.")
@@ -43,5 +37,23 @@ class ChangeTimerActionInteractorTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: - Helpers
 
+    func attemptChangeTimer(request: TimerRequestModel,
+                            completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
+        
+        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
+        
+        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
+        
+        sut.execute(requestParameter: request) { result in
+            switch result {
+            case .success(let timer):
+                completion(.success(timer))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
