@@ -31,8 +31,15 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
             
             timer.state = TimerEntity.TimerState(rawValue: requestParameter.state)!
             
-            let result = TimerResponseModel(timer: timer)
-            completion(.success(result))
+            repository.execute(timer: timer) { result in
+                switch result {
+                case .success(let timerResult):
+                    let response = TimerResponseModel(timer: timerResult)
+                    completion(.success(response))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
         } catch {
             completion(.failure(error))
         }
