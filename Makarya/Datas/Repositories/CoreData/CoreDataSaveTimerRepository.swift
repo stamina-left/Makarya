@@ -39,7 +39,6 @@ final class CoreDataSaveTimerRepository: SaveTimerRepository {
             completion(.failure(error))
         }
         
-        // TO-DO: Convert Timer CoreData model into TimerEntity.
         completion(.success(()))
     }
     
