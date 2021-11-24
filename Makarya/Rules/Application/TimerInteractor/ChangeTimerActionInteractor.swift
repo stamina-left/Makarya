@@ -14,6 +14,12 @@ protocol ChangeTimerActionInteractor {
 
 final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteractor {
     
+    private let repository: ChangeTimerRepository
+    
+    init(repository: ChangeTimerRepository) {
+        self.repository = repository
+    }
+    
     func execute(requestParameter: TimerRequestModel,
                  completion: @escaping(Result<TimerResponseModel, Error>) -> Void) {
         
