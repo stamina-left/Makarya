@@ -14,7 +14,8 @@ class ChangeTimerActionInteractorTests: XCTestCase {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
         
-        let sut = ChangeTimerActionInteractorImplementation()
+        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
+        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
             
         sut.execute(requestParameter: request) { result in
             switch result {
@@ -30,7 +31,8 @@ class ChangeTimerActionInteractorTests: XCTestCase {
         
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "undying")
         
-        let sut = ChangeTimerActionInteractorImplementation()
+        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
+        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
         
         sut.execute(requestParameter: request) { result in
             switch result {
