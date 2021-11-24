@@ -8,12 +8,14 @@
 import Foundation
 
 protocol ChangeTimerActionInteractor {
-    func execute(requestParameter: TimerRequestModel, completion: @escaping(Result<TimerResponseModel, Error>) -> Void)
+    func execute(requestParameter: TimerRequestModel,
+                 completion: @escaping(Result<TimerResponseModel, Error>) -> Void)
 }
 
 final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteractor {
     
-    func execute(requestParameter: TimerRequestModel, completion: @escaping(Result<TimerResponseModel, Error>) -> Void) {
+    func execute(requestParameter: TimerRequestModel,
+                 completion: @escaping(Result<TimerResponseModel, Error>) -> Void) {
         
         do {
             try TimerEntityValidation().validate(requestParameter)
