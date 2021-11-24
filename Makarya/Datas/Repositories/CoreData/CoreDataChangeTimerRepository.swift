@@ -17,6 +17,29 @@ final class CoreDataChangeTimerRepository: ChangeTimerRepository {
     }
     
     func execute(timer: TimerEntity, completion: @escaping (Result<TimerEntity, Error>) -> Void) {
-        <#code#>
+        
+        // Create Clock from CoreData
+        let cdClock = CoreDataClock(context: coreDataManager.managedObjectContext)
+        cdClock.hours = Int16(timer.clock.hours)
+        cdClock.minutes = Int16(timer.clock.minutes)
+        cdClock.seconds = Int16(timer.clock.seconds)
+        
+        // Create Timer from CoreData
+        let cdTimer = CoreDataTimer(context: coreDataManager.managedObjectContext)
+        cdTimer.id = timer.id
+        cdTimer.ofClock = cdClock
+        cdTimer.date = Date()
+        cdTimer.state = timer.state.rawValue
+        
+        // Update changes
+        do {
+            try coreDataManager.managedObjectContext.save()
+        } catch {
+            completion(.failure(error))
+        }
+        
+        // Convert Timer CoreData to TimerEntity
+        // or just return the request parameter
+        completion(.success(timer))
     }
 }
