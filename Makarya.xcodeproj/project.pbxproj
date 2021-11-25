@@ -167,6 +167,7 @@
 		5E5CA2DA26FCB18F00FBEB6E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5E0CC0E82739511400F04773 /* Models */,
 				5EC7ABC72732ED3400A6639F /* TimerInteractor */,
 			);
 			path = Application;
@@ -228,7 +229,6 @@
 		5EC7ABC72732ED3400A6639F /* TimerInteractor */ = {
 			isa = PBXGroup;
 			children = (
-				5E0CC0E82739511400F04773 /* Models */,
 				5E552E672733BC6D002E0861 /* Validations */,
 				5E96AAB52734E0CA001F71F9 /* SetTimerInteractor.swift */,
 				5E0FFB93273C277000B35B45 /* ChangeTimerActionInteractor.swift */,
