@@ -24,10 +24,15 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
                  completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
         
         do {
-            try ClockValueObjectValidation().validate(requestParameter)
+            let timerRequest = TimerRequestModel(timer: request)
             
-            let clockRequest = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
-            let timer = TimerEntity(clock: clockRequest, date: requestParameter.date)
+            try ClockValueObjectValidation().validate(timerRequest)
+            
+            let clock = ClockValueObject(hours: timerRequest.hours,
+                                         minutes: timerRequest.minutes,
+                                         seconds: timerRequest.seconds)
+            let timer = TimerEntity(clock: clock,
+                                    date: timerRequest.date)
             
             repository.execute(timer: timer) { result in
                 switch result {
