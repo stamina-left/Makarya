@@ -15,10 +15,19 @@ protocol TimerRequest {
     var state: String { get set }
 }
 
-struct TimerRequestModel {
-    let hours: Int
-    let minutes: Int
-    let seconds: Int
-    let date: Date
-    let state: String
+final class TimerRequestModel: TimerRequest {
+    
+    var hours: Int
+    var minutes: Int
+    var seconds: Int
+    var date: Date
+    var state: String
+    
+    init(hours: Int, minutes: Int, seconds: Int, date: Date, state: String) {
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+        self.date = date
+        self.state = state
+    }
 }
