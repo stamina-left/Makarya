@@ -7,6 +7,14 @@
 
 import Foundation
 
+protocol TimerRequest {
+    var hours: Int { get set }
+    var minutes: Int { get set }
+    var seconds: Int { get set }
+    var date: Date { get set }
+    var state: String { get set }
+}
+
 struct TimerRequestModel {
     let hours: Int
     let minutes: Int
