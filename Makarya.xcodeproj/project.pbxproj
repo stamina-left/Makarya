@@ -219,18 +219,10 @@
 			path = Interactors;
 			sourceTree = "<group>";
 		};
-		5E77F9382753B2D500D506AA /* TimerPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				5E77F9392753B32000D506AA /* SetTimerPresenter.swift */,
-			);
-			path = TimerPresenter;
-			sourceTree = "<group>";
-		};
 		5E77F93B2753B7E300D506AA /* SetTimerScene */ = {
 			isa = PBXGroup;
 			children = (
-				5E77F9382753B2D500D506AA /* TimerPresenter */,
+				5E77F9392753B32000D506AA /* SetTimerPresenter.swift */,
 			);
 			path = SetTimerScene;
 			sourceTree = "<group>";
