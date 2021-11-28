@@ -9,7 +9,7 @@ import Foundation
 
 final class ClockValueObjectValidation {
     
-    func validate(_ timer: TimerRequestModel) throws {
+    func validate(_ timer: TimerRequest) throws {
         
         guard 0...23 ~= timer.hours else {
             throw ClockValueObjectError.invalidHours

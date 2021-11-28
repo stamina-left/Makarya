@@ -9,7 +9,7 @@ import Foundation
 
 final class TimerEntityValidation {
     
-    func validate(_ timer: TimerRequestModel) throws {
+    func validate(_ timer: TimerRequest) throws {
         
         guard TimerEntity.TimerState.allCases.contains(where: { $0.rawValue == timer.state }) else {
             throw TimerEntityError.invalidState

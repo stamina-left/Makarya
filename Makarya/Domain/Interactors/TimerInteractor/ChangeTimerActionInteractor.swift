@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ChangeTimerActionInteractor {
-    func execute(requestParameter: TimerRequestModel,
+    func execute(requestParameter: TimerRequest,
                  completion: @escaping(Result<TimerResponseModel, Error>) -> Void)
 }
 
@@ -20,7 +20,7 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
         self.repository = repository
     }
     
-    func execute(requestParameter: TimerRequestModel,
+    func execute(requestParameter: TimerRequest,
                  completion: @escaping(Result<TimerResponseModel, Error>) -> Void) {
         
         do {
