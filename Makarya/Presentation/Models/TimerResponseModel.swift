@@ -7,11 +7,19 @@
 
 import Foundation
 
-struct TimerResponseModel {
-    let hours: Int
-    let minutes: Int
-    let seconds: Int
-    let state: String
+protocol TimerResponse {
+    var hours: Int { get set }
+    var minutes: Int { get set }
+    var seconds: Int { get set }
+    var state: String { get set }
+}
+
+final class TimerResponseModel: TimerResponse {
+    
+    var hours: Int
+    var minutes: Int
+    var seconds: Int
+    var state: String
     
     init(timer: TimerEntity) {
         self.hours = timer.clock.hours
