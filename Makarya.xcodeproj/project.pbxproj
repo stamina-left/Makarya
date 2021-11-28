@@ -103,12 +103,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5E1338F3273BBE4500F40E0B /* Datas */ = {
+		5E1338F3273BBE4500F40E0B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				5E8CC446273ED37B00112BD5 /* Repositories */,
 			);
-			path = Datas;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5E2CD03A27454591001ACC78 /* CoreData */ = {
@@ -153,9 +153,9 @@
 		5E57464726B310C6000840D3 /* Makarya */ = {
 			isa = PBXGroup;
 			children = (
-				5E77F9352753B1EE00D506AA /* Adapters */,
+				5E77F9362753B23100D506AA /* Presentation */,
 				5E5CA2DB26FCB1A400FBEB6E /* Domain */,
-				5E1338F3273BBE4500F40E0B /* Datas */,
+				5E1338F3273BBE4500F40E0B /* Data */,
 				5E57464826B310C6000840D3 /* AppDelegate.swift */,
 				5E57464A26B310C6000840D3 /* SceneDelegate.swift */,
 				5E57464C26B310C6000840D3 /* ViewController.swift */,
@@ -202,21 +202,13 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		5E77F9352753B1EE00D506AA /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				5E77F9362753B23100D506AA /* Presenters */,
-			);
-			path = Adapters;
-			sourceTree = "<group>";
-		};
-		5E77F9362753B23100D506AA /* Presenters */ = {
+		5E77F9362753B23100D506AA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				5E0CC0E82739511400F04773 /* Models */,
 				5E77F9382753B2D500D506AA /* TimerPresenter */,
 			);
-			path = Presenters;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		5E77F9372753B28900D506AA /* Interactors */ = {
