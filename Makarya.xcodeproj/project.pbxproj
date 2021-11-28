@@ -206,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0CC0E82739511400F04773 /* Models */,
-				5E77F9382753B2D500D506AA /* TimerPresenter */,
+				5E77F93B2753B7E300D506AA /* SetTimerScene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -225,6 +225,14 @@
 				5E77F9392753B32000D506AA /* SetTimerPresenter.swift */,
 			);
 			path = TimerPresenter;
+			sourceTree = "<group>";
+		};
+		5E77F93B2753B7E300D506AA /* SetTimerScene */ = {
+			isa = PBXGroup;
+			children = (
+				5E77F9382753B2D500D506AA /* TimerPresenter */,
+			);
+			path = SetTimerScene;
 			sourceTree = "<group>";
 		};
 		5E8CC446273ED37B00112BD5 /* Repositories */ = {
