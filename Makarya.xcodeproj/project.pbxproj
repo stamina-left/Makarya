@@ -151,6 +151,7 @@
 		5E57464726B310C6000840D3 /* Makarya */ = {
 			isa = PBXGroup;
 			children = (
+				5E77F9352753B1EE00D506AA /* Adapters */,
 				5E5CA2DB26FCB1A400FBEB6E /* Rules */,
 				5E1338F3273BBE4500F40E0B /* Datas */,
 				5E57464826B310C6000840D3 /* AppDelegate.swift */,
@@ -168,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0CC0E82739511400F04773 /* Models */,
-				5EC7ABC72732ED3400A6639F /* TimerInteractor */,
+				5E77F9372753B28900D506AA /* Interactors */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -206,6 +207,29 @@
 				5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5E77F9352753B1EE00D506AA /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				5E77F9362753B23100D506AA /* Presenters */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		5E77F9362753B23100D506AA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		5E77F9372753B28900D506AA /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				5EC7ABC72732ED3400A6639F /* TimerInteractor */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 		5E8CC446273ED37B00112BD5 /* Repositories */ = {
