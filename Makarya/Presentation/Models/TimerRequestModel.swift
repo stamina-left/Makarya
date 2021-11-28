@@ -23,11 +23,11 @@ final class TimerRequestModel: TimerRequest {
     var date: Date
     var state: String
     
-    init(timer: TimerRequest) {
-        self.hours = timer.hours
-        self.minutes = timer.minutes
-        self.seconds = timer.seconds
-        self.date = timer.date
-        self.state = timer.state
+    init(hours: Int, minutes: Int, seconds: Int, date: Date = Date(), state: String) {
+        self.hours = hours
+        self.minutes = minutes
+        self.seconds = seconds
+        self.date = date
+        self.state = state
     }
 }
