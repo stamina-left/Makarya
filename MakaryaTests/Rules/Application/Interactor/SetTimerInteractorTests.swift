@@ -41,7 +41,7 @@ class SetTimerInteractorTests: XCTestCase {
     // MARK: - Helpers
     
     private func attemptSetTimer(request: TimerRequestModel,
-                         completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
+                         completion: @escaping (Result<TimerResponse, Error>) -> Void) {
         
         let repository = CoreDataSaveTimerRepository(coreDataManager: TestCoreDataManager().create())
         

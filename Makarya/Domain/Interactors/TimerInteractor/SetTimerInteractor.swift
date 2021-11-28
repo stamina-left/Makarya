@@ -9,7 +9,7 @@ import Foundation
 
 protocol SetTimerInteractor {
     func execute(request: TimerRequest,
-                 completion: @escaping (Result<TimerResponseModel, Error>) -> Void)
+                 completion: @escaping (Result<TimerResponse, Error>) -> Void)
 }
 
 final class SetTimerInteractorImplementation: SetTimerInteractor {
@@ -21,7 +21,7 @@ final class SetTimerInteractorImplementation: SetTimerInteractor {
     }
     
     func execute(request: TimerRequest,
-                 completion: @escaping (Result<TimerResponseModel, Error>) -> Void) {
+                 completion: @escaping (Result<TimerResponse, Error>) -> Void) {
         
         do {
             let timerRequest = TimerRequestModel(timer: request)
