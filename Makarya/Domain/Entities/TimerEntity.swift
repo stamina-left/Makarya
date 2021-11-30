@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TimerEntity {
+struct TimerEntity {
     
     typealias Clock = ClockValueObject
     
