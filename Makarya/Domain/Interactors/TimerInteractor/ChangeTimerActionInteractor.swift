@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol ChangeTimerActionInteractor {
-    func execute(requestParameter: TimerRequest,
-                 completion: @escaping(Result<TimerResponse, Error>) -> Void)
-}
-
-final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteractor {
+final class ChangeTimerActionInteractorImplementation {
     
     private let repository: ChangeTimerRepository
     
@@ -27,7 +22,7 @@ final class ChangeTimerActionInteractorImplementation: ChangeTimerActionInteract
             try TimerEntityValidation().validate(requestParameter)
             
             let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
-            let timer = TimerEntity(clock: clock, date: requestParameter.date)
+            var timer = TimerEntity(clock: clock, date: requestParameter.date)
             
             timer.state = TimerEntity.TimerState(rawValue: requestParameter.state)!
             

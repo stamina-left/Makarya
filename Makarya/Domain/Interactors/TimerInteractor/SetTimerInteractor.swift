@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol SetTimerInteractor {
-    func execute(request: TimerRequest,
-                 completion: @escaping (Result<TimerResponse, Error>) -> Void)
-}
-
-final class SetTimerInteractorImplementation: SetTimerInteractor {
+final class SetTimerInteractorImplementation {
     
     private let repository: SaveTimerRepository
     
