@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataSaveTimerRepository: SaveTimerRepository {
+final class CoreDataSaveTimerRepository: AddableRepository {
     
     private let coreDataManager: CoreDataManager
     

@@ -22,7 +22,7 @@ struct AddableTimerInteractor: AddableInteractor {
 
 //final class SetTimerInteractorImplementation {
 //
-//    private let repository: SaveTimerRepository
+//    private let repository: AddableRepository
 //
 //    init(repository: SaveTimerRepository) {
 //        self.repository = repository
