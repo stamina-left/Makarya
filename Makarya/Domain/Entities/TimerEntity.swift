@@ -24,11 +24,11 @@ struct TimerEntity: Entity {
         self.clock = clock
         self.date = date
     }
-    
-    enum TimerState: String, CaseIterable {
-        case started = "started"
-        case paused = "paused"
-        case stopped = "stopped"
-        case finished = "finished"
-    }
+}
+
+enum TimerState: String, CaseIterable {
+    case started = "started"
+    case paused = "paused"
+    case stopped = "stopped"
+    case finished = "finished"
 }
