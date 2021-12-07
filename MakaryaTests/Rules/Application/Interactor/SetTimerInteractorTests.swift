@@ -47,7 +47,7 @@ class SetTimerInteractorTests: XCTestCase {
         
         let sut = SetTimerInteractorImplementation(repository: repository)
         
-        sut.execute(requestParameter: request) { result in
+        sut.execute(request: request) { result in
             switch result {
             case .success(let timer):
                 completion(.success(timer))
