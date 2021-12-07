@@ -33,7 +33,19 @@ struct AddableTimerInteractor: AddableInteractor {
     }
     
     func add(_ request: Entity, completion: @escaping (AddableTimerInteractorCompletion)) {
-        <#code#>
+        
+        // Validate the request
+        guard 0...23 ~= request.clock.hours else {
+            completion(.failure(.invalidHours))
+        }
+        
+        guard 0...60 ~= request.clock.minutes else {
+            completion(.failure(.invalidMinutes))
+        }
+        
+        guard 0...60 ~= request.clock.seconds else {
+            completion(.failure(.invalidSeconds)
+        }
     }
 }
 
