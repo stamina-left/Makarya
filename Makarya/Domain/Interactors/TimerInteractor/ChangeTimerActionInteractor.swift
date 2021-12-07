@@ -24,7 +24,7 @@ final class ChangeTimerActionInteractorImplementation {
             let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
             var timer = TimerEntity(clock: clock, date: requestParameter.date)
             
-            timer.state = TimerEntity.TimerState(rawValue: requestParameter.state)!
+            timer.state = TimerState(rawValue: requestParameter.state)!
             
             repository.execute(timer: timer) { result in
                 switch result {
