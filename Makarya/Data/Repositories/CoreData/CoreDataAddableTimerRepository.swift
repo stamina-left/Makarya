@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataSaveTimerRepository: AddableRepository {
+final class CoreDataAddableTimerRepository: AddableTimerRepository {
     
     private let coreDataManager: CoreDataManager
     
@@ -17,7 +17,7 @@ final class CoreDataSaveTimerRepository: AddableRepository {
     }
     
     func execute(timer: TimerEntity,
-                 completion: @escaping (Result<Void, Error>) -> Void) {
+                 completion: @escaping AddableTimerRepositoryCompletion) {
         
         // Create Clock from CoreData
         let cdClock = CoreDataClock(context: coreDataManager.managedObjectContext)
