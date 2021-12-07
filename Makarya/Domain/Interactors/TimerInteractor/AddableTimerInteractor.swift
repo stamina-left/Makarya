@@ -24,7 +24,7 @@ protocol AddableInteractor {
     func add(_ request: Request, completion: @escaping (AddableTimerInteractorCompletion))
 }
 
-struct AddableTimerInteractor: AddableInteractor {
+final class AddableTimerInteractor: AddableInteractor {
     
     typealias Request = TimerEntity
     typealias Response = Void
