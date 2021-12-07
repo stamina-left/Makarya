@@ -1,5 +1,5 @@
 //
-//  CoreDataSaveTimerRepository.swift
+//  CoreDataAddableTimerRepository.swift
 //  Makarya
 //
 //  Created by Albert Pangestu on 17/11/21.
@@ -35,8 +35,9 @@ final class CoreDataAddableTimerRepository: AddableTimerRepository {
         do {
             // Save Timer into Persistence Store
             try coreDataManager.managedObjectContext.save()
+            // WARN: No completion success.
         } catch {
-            completion(.failure(error))
+            completion(.failure(.failedManagedContext))
         }
         
         completion(.success(()))
