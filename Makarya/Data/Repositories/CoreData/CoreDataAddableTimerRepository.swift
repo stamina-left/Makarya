@@ -39,11 +39,5 @@ final class CoreDataAddableTimerRepository: AddableTimerRepository {
         } catch {
             completion(.failure(.failedManagedContext))
         }
-        
-        completion(.success(()))
-    }
-    
-    enum CoreDataError: Error {
-        case failedManagedContext
     }
 }
