@@ -14,16 +14,18 @@ enum AddableInteractorError: Error {
 }
 protocol AddableInteractor {
     
-    associatedtype Entity
+    associatedtype Request
+    associatedtype Response
     associatedtype InteractorError: Error
     
-    typealias AddableTimerInteractorCompletion = (Result<Entity, InteractorError>) -> Void
-    func add(_ request: Entity, completion: @escaping (AddableTimerInteractorCompletion))
+    typealias AddableTimerInteractorCompletion = (Result<Response, InteractorError>) -> Void
+    func add(_ request: Request, completion: @escaping (AddableTimerInteractorCompletion))
 }
 
 struct AddableTimerInteractor: AddableInteractor {
     
-    typealias Entity = TimerEntity
+    typealias Request = TimerEntity
+    typealias Response = Void
     typealias InteractorError = AddableInteractorError
     
     private let repository: AddableTimerRepository
@@ -32,7 +34,7 @@ struct AddableTimerInteractor: AddableInteractor {
         self.repository = repository
     }
     
-    func add(_ request: Entity, completion: @escaping (AddableTimerInteractorCompletion)) {
+    func add(_ request: Request, completion: @escaping (AddableTimerInteractorCompletion)) {
         
         // Validate the request
         guard 0...23 ~= request.clock.hours else {

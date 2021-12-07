@@ -16,6 +16,7 @@
 		5E2CD03F27455440001ACC78 /* CoreDataAddableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */; };
 		5E446292274E7F0B0068B62C /* ChangeTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E446291274E7F0B0068B62C /* ChangeTimerRepository.swift */; };
 		5E446294274E7FA50068B62C /* CoreDataChangeTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E446293274E7FA50068B62C /* CoreDataChangeTimerRepository.swift */; };
+		5E516369275FA86100B158B5 /* AddableTimerPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E516368275FA86100B158B5 /* AddableTimerPresenterStub.swift */; };
 		5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */; };
 		5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464826B310C6000840D3 /* AppDelegate.swift */; };
 		5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464A26B310C6000840D3 /* SceneDelegate.swift */; };
@@ -26,7 +27,7 @@
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E8FA09C274AD2F3003052E3 /* TestCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FA09B274AD2F3003052E3 /* TestCoreDataManager.swift */; };
 		5E96363127481851004758E9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96363027481851004758E9 /* CoreDataManager.swift */; };
-		5E96AAB42734DC81001F71F9 /* SetTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */; };
+		5E96AAB42734DC81001F71F9 /* AddableTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB32734DC81001F71F9 /* AddableTimerInteractorTests.swift */; };
 		5E96AAB62734E0CA001F71F9 /* AddableTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB52734E0CA001F71F9 /* AddableTimerInteractor.swift */; };
 		5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */; };
 		5EB3E7BD275F85C900A3F043 /* AddableTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3E7BC275F85C900A3F043 /* AddableTimerPresenter.swift */; };
@@ -54,6 +55,7 @@
 		5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAddableTimerRepository.swift; sourceTree = "<group>"; };
 		5E446291274E7F0B0068B62C /* ChangeTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimerRepository.swift; sourceTree = "<group>"; };
 		5E446293274E7FA50068B62C /* CoreDataChangeTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataChangeTimerRepository.swift; sourceTree = "<group>"; };
+		5E516368275FA86100B158B5 /* AddableTimerPresenterStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerPresenterStub.swift; sourceTree = "<group>"; };
 		5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObjectValidation.swift; sourceTree = "<group>"; };
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E57464826B310C6000840D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E8FA09B274AD2F3003052E3 /* TestCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataManager.swift; sourceTree = "<group>"; };
 		5E96363027481851004758E9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerInteractorTests.swift; sourceTree = "<group>"; };
+		5E96AAB32734DC81001F71F9 /* AddableTimerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerInteractorTests.swift; sourceTree = "<group>"; };
 		5E96AAB52734E0CA001F71F9 /* AddableTimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerInteractor.swift; sourceTree = "<group>"; };
 		5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
 		5EB3E7BC275F85C900A3F043 /* AddableTimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerPresenter.swift; sourceTree = "<group>"; };
@@ -196,7 +198,7 @@
 		5E5CA2DE26FCB2D700FBEB6E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				5E96AAB32734DC81001F71F9 /* SetTimerInteractorTests.swift */,
+				5E96AAB32734DC81001F71F9 /* AddableTimerInteractorTests.swift */,
 				5E1E7B7D273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift */,
 			);
 			path = Interactor;
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				5E8FA09B274AD2F3003052E3 /* TestCoreDataManager.swift */,
+				5E516368275FA86100B158B5 /* AddableTimerPresenterStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -402,7 +405,8 @@
 			files = (
 				5E1E7B7E273D8A6A004DCD4B /* ChangeTimerActionInteractorTests.swift in Sources */,
 				5E8FA09C274AD2F3003052E3 /* TestCoreDataManager.swift in Sources */,
-				5E96AAB42734DC81001F71F9 /* SetTimerInteractorTests.swift in Sources */,
+				5E516369275FA86100B158B5 /* AddableTimerPresenterStub.swift in Sources */,
+				5E96AAB42734DC81001F71F9 /* AddableTimerInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
