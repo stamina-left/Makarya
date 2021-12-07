@@ -57,7 +57,7 @@ final class AddableTimerInteractor: AddableInteractor {
         repository.execute(timer: request) { result in
             switch result {
             case .success(let response):
-                presenter.show(response)
+                self.presenter.show(response)
             case .failure(_):
                 completion(.failure(.repositoryError))
             }
