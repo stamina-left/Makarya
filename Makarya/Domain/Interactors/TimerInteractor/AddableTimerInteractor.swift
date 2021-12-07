@@ -14,7 +14,10 @@ enum AddableInteractorError: Error {
 }
 protocol AddableInteractor {
     
-    typealias AddableTimerInteractorCompletion = (Result<Entity, Error>) -> Void
+    associatedtype Entity
+    associatedtype InteractorError: Error
+    
+    typealias AddableTimerInteractorCompletion = (Result<Entity, InteractorError>) -> Void
     func add(_ request: Entity, completion: @escaping (AddableTimerInteractorCompletion))
 }
 
