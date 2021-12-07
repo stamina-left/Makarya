@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum AddableInteractorError: Error {
+    case invalidHours
+    case invalidMinutes
+    case invalidSeconds
+}
 protocol AddableInteractor {
     
     typealias AddableTimerInteractorCompletion = (Result<Entity, Error>) -> Void
