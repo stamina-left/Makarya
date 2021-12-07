@@ -23,6 +23,15 @@ protocol AddableInteractor {
 
 struct AddableTimerInteractor: AddableInteractor {
     
+    typealias Entity = TimerEntity
+    typealias InteractorError = AddableInteractorError
+    
+    private let repository: AddableTimerRepository
+    
+    init(repository: AddableTimerRepository) {
+        self.repository = repository
+    }
+    
     func add(_ request: Entity, completion: @escaping (AddableTimerInteractorCompletion)) {
         <#code#>
     }
