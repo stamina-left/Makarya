@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct TimerEntity {
+protocol Entity {
+    var id: UUID { set get }
+}
+
+struct TimerEntity: Entity {
     
     typealias Clock = ClockValueObject
     
-    let id = UUID()
+    var id = UUID()
     let clock: Clock
     let date: Date
     var state: TimerState = .started
