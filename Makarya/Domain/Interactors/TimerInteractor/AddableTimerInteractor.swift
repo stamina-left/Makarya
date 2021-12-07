@@ -11,7 +11,9 @@ enum AddableInteractorError: Error {
     case invalidHours
     case invalidMinutes
     case invalidSeconds
+    case repositoryError
 }
+
 protocol AddableInteractor {
     
     associatedtype Request
@@ -29,9 +31,12 @@ struct AddableTimerInteractor: AddableInteractor {
     typealias InteractorError = AddableInteractorError
     
     private let repository: AddableTimerRepository
+    private let presenter: AddableTimerPresenter
     
-    init(repository: AddableTimerRepository) {
+    init(repository: AddableTimerRepository,
+         presenter: AddableTimerPresenter) {
         self.repository = repository
+        self.presenter = presenter
     }
     
     func add(_ request: Request, completion: @escaping (AddableTimerInteractorCompletion)) {
