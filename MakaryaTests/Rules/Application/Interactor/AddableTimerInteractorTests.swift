@@ -1,5 +1,5 @@
 //
-//  SetTimerInteractorTests.swift
+//  AddableTimerInteractorTests.swift
 //  MakaryaTests
 //
 //  Created by Albert Pangestu on 05/11/21.
@@ -8,9 +8,9 @@
 import XCTest
 @testable import Makarya
 
-class SetTimerInteractorTests: XCTestCase {
+class AddableTimerInteractorTests: XCTestCase {
 
-    func testSetTimer_WhenInformationProvided_TimerInStartedState() {
+    func testAddTimer_WhenInformationProvided_TimerInStartedState() {
        
         let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
         
@@ -24,7 +24,7 @@ class SetTimerInteractorTests: XCTestCase {
         }
     }
     
-    func testSetTimer_WhenWrongInformationProvided_ReturnsAnError() {
+    func testAddTimer_WhenWrongInformationProvided_ReturnsAnError() {
         
         let request = TimerRequestModel(hours: 27, minutes: 0, seconds: 0, date: Date(), state: "")
         
@@ -45,7 +45,7 @@ class SetTimerInteractorTests: XCTestCase {
         
         let repository = CoreDataAddableTimerRepository(coreDataManager: TestCoreDataManager().create())
         
-        let sut = SetTimerInteractorImplementation(repository: repository)
+        let sut = AddableTimerInteractor(repository: repository, presenter: <#T##AddableTimerPresenter#>)
         
         sut.execute(request: request) { result in
             switch result {

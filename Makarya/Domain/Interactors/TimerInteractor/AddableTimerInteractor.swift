@@ -43,16 +43,26 @@ struct AddableTimerInteractor: AddableInteractor {
         
         // Validate the request
         guard 0...23 ~= request.clock.hours else {
-            completion(.failure(.invalidHours))
+            return completion(.failure(.invalidHours))
         }
         
         guard 0...60 ~= request.clock.minutes else {
-            completion(.failure(.invalidMinutes))
+            return completion(.failure(.invalidMinutes))
         }
         
         guard 0...60 ~= request.clock.seconds else {
-            completion(.failure(.invalidSeconds)
+            return completion(.failure(.invalidSeconds))
         }
+        
+        repository.execute(timer: request) { result in
+            switch result {
+            case .success(let response):
+                presenter.show(response)
+            case .failure(_):
+                completion(.failure(.repositoryError))
+            }
+        }
+            
     }
 }
 
