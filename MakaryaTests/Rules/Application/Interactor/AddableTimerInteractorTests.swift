@@ -55,5 +55,13 @@ class AddableTimerInteractorTests: XCTestCase {
                 completion(.failure(error))
             }
         }
+//        sut.execute(request: request) { result in
+//            switch result {
+//            case .success(let timer):
+//                completion(.success(timer))
+//            case .failure(let error):
+//                completion(.failure(error))
+//            }
+//        }
     }
 }
