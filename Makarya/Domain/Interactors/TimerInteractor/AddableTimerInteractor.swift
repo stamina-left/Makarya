@@ -27,16 +27,13 @@ protocol AddableInteractor {
 final class AddableTimerInteractor: AddableInteractor {
     
     typealias Request = TimerEntity
-    typealias Response = Void
+    typealias Response = TimerEntity
     typealias InteractorError = AddableInteractorError
     
     private let repository: AddableTimerRepository
-    private let presenter: AddableTimerPresenter
     
-    init(repository: AddableTimerRepository,
-         presenter: AddableTimerPresenter) {
+    init(repository: AddableTimerRepository) {
         self.repository = repository
-        self.presenter = presenter
     }
     
     func add(_ request: Request, completion: @escaping (AddableTimerInteractorCompletion)) {
@@ -57,7 +54,7 @@ final class AddableTimerInteractor: AddableInteractor {
         repository.execute(timer: request) { result in
             switch result {
             case .success(let response):
-                self.presenter.show(response)
+                completion(.success(response))
             case .failure(_):
                 completion(.failure(.repositoryError))
             }
