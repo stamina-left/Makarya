@@ -43,7 +43,7 @@ class ChangeTimerActionInteractorTests: XCTestCase {
     func attemptChangeTimer(request: TimerRequestModel,
                             completion: @escaping (Result<TimerResponse, Error>) -> Void) {
         
-        let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
+        let repository = CoreDataUpdatableTimerRepository(coreDataManager: TestCoreDataManager().create())
         
         let sut = UpdatableTimerInteractor(repository: repository)
         
