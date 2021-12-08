@@ -16,7 +16,6 @@
 		5E2CD03F27455440001ACC78 /* CoreDataAddableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */; };
 		5E446292274E7F0B0068B62C /* UpdatableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E446291274E7F0B0068B62C /* UpdatableTimerRepository.swift */; };
 		5E446294274E7FA50068B62C /* CoreDataUpdatableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E446293274E7FA50068B62C /* CoreDataUpdatableTimerRepository.swift */; };
-		5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */; };
 		5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464826B310C6000840D3 /* AppDelegate.swift */; };
 		5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464A26B310C6000840D3 /* SceneDelegate.swift */; };
 		5E57464D26B310C6000840D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E57464C26B310C6000840D3 /* ViewController.swift */; };
@@ -31,7 +30,6 @@
 		5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */; };
 		5EB3E7BD275F85C900A3F043 /* AddableTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3E7BC275F85C900A3F043 /* AddableTimerPresenter.swift */; };
 		5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */; };
-		5ED52C18273E68EE003427AA /* TimerEntityValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED52C17273E68EE003427AA /* TimerEntityValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +52,6 @@
 		5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAddableTimerRepository.swift; sourceTree = "<group>"; };
 		5E446291274E7F0B0068B62C /* UpdatableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableTimerRepository.swift; sourceTree = "<group>"; };
 		5E446293274E7FA50068B62C /* CoreDataUpdatableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUpdatableTimerRepository.swift; sourceTree = "<group>"; };
-		5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObjectValidation.swift; sourceTree = "<group>"; };
 		5E57464526B310C6000840D3 /* Makarya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makarya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E57464826B310C6000840D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E57464A26B310C6000840D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
 		5EB3E7BC275F85C900A3F043 /* AddableTimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerPresenter.swift; sourceTree = "<group>"; };
 		5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockValueObject.swift; sourceTree = "<group>"; };
-		5ED52C17273E68EE003427AA /* TimerEntityValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityValidation.swift; sourceTree = "<group>"; };
 		5EF712B026E2558F0094349F /* MakaryaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakaryaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF712B426E2558F0094349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,15 +116,6 @@
 				5E96363027481851004758E9 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		5E552E672733BC6D002E0861 /* Validations */ = {
-			isa = PBXGroup;
-			children = (
-				5E552E682733BE7C002E0861 /* ClockValueObjectValidation.swift */,
-				5ED52C17273E68EE003427AA /* TimerEntityValidation.swift */,
-			);
-			path = Validations;
 			sourceTree = "<group>";
 		};
 		5E57463C26B310C6000840D3 = {
@@ -248,7 +235,6 @@
 		5EC7ABC72732ED3400A6639F /* TimerInteractor */ = {
 			isa = PBXGroup;
 			children = (
-				5E552E672733BC6D002E0861 /* Validations */,
 				5E96AAB52734E0CA001F71F9 /* AddableTimerInteractor.swift */,
 				5E0FFB93273C277000B35B45 /* UpdatableTimerInteractor.swift */,
 			);
@@ -383,7 +369,6 @@
 				5E2CD03D274545DC001ACC78 /* Makarya.xcdatamodeld in Sources */,
 				5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
-				5E552E692733BE7C002E0861 /* ClockValueObjectValidation.swift in Sources */,
 				5E1541EB2740FD0400EC2886 /* AddableTimerRepository.swift in Sources */,
 				5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */,
 				5E446294274E7FA50068B62C /* CoreDataUpdatableTimerRepository.swift in Sources */,
@@ -391,7 +376,6 @@
 				5E0FFB94273C277000B35B45 /* UpdatableTimerInteractor.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 				5E446292274E7F0B0068B62C /* UpdatableTimerRepository.swift in Sources */,
-				5ED52C18273E68EE003427AA /* TimerEntityValidation.swift in Sources */,
 				5EC7ABD0273310CA00A6639F /* ClockValueObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
