@@ -1,5 +1,5 @@
 //
-//  ChangeTimerActionInteractorTests.swift
+//  UpdatableTimerInteractorTests.swift
 //  MakaryaTests
 //
 //  Created by Albert Pangestu on 12/11/21.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Makarya
 
-class ChangeTimerActionInteractorTests: XCTestCase {
+class UpdatableTimerInteractorTests: XCTestCase {
 
     func testChangeTimerAction_WhenActionProvided_TimerChangedIntoCorrectState() {
         
