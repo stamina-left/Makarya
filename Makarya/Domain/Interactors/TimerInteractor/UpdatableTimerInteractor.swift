@@ -23,9 +23,9 @@ protocol UpdatableInteractor {
 
 final class UpdatableTimerInteractor {
     
-    private let repository: ChangeTimerRepository
+    private let repository: UpdatableTimerRepository
     
-    init(repository: ChangeTimerRepository) {
+    init(repository: UpdatableTimerRepository) {
         self.repository = repository
     }
     

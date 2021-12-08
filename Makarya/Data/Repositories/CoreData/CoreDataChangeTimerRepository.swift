@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataChangeTimerRepository: ChangeTimerRepository {
+final class CoreDataChangeTimerRepository: UpdatableTimerRepository {
     
     private let coreDataManager: CoreDataManager
     
