@@ -40,14 +40,14 @@ class UpdatableTimerInteractorTests: XCTestCase {
     
     // MARK: - Helpers
 
-    func attemptChangeTimer(request: TimerRequestModel,
-                            completion: @escaping (Result<TimerResponse, Error>) -> Void) {
+    func attemptChangeTimer(request: TimerEntity,
+                            completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         let repository = CoreDataUpdatableTimerRepository(coreDataManager: TestCoreDataManager().create())
         
         let sut = UpdatableTimerInteractor(repository: repository)
         
-        sut.execute(requestParameter: request) { result in
+        sut.update(request) { result in
             switch result {
             case .success(let timer):
                 completion(.success(timer))
