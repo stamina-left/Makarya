@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */; };
 		5E0FFB94273C277000B35B45 /* UpdatableTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0FFB93273C277000B35B45 /* UpdatableTimerInteractor.swift */; };
 		5E1541EB2740FD0400EC2886 /* AddableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1541EA2740FD0400EC2886 /* AddableTimerRepository.swift */; };
 		5E1E7B7E273D8A6A004DCD4B /* UpdatableTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E7B7D273D8A6A004DCD4B /* UpdatableTimerInteractorTests.swift */; };
-		5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E25C814273965E700920848 /* TimerResponseModel.swift */; };
 		5E2CD03D274545DC001ACC78 /* Makarya.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CD03B274545DC001ACC78 /* Makarya.xcdatamodeld */; };
 		5E2CD03F27455440001ACC78 /* CoreDataAddableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */; };
 		5E446292274E7F0B0068B62C /* UpdatableTimerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E446291274E7F0B0068B62C /* UpdatableTimerRepository.swift */; };
@@ -43,11 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRequestModel.swift; sourceTree = "<group>"; };
 		5E0FFB93273C277000B35B45 /* UpdatableTimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableTimerInteractor.swift; sourceTree = "<group>"; };
 		5E1541EA2740FD0400EC2886 /* AddableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddableTimerRepository.swift; sourceTree = "<group>"; };
 		5E1E7B7D273D8A6A004DCD4B /* UpdatableTimerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableTimerInteractorTests.swift; sourceTree = "<group>"; };
-		5E25C814273965E700920848 /* TimerResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerResponseModel.swift; sourceTree = "<group>"; };
 		5E2CD03C274545DC001ACC78 /* Makarya.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Makarya.xcdatamodel; sourceTree = "<group>"; };
 		5E2CD03E27455440001ACC78 /* CoreDataAddableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAddableTimerRepository.swift; sourceTree = "<group>"; };
 		5E446291274E7F0B0068B62C /* UpdatableTimerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatableTimerRepository.swift; sourceTree = "<group>"; };
@@ -90,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E0CC0E82739511400F04773 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5E0CC0E92739512F00F04773 /* TimerRequestModel.swift */,
-				5E25C814273965E700920848 /* TimerResponseModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		5E1338F3273BBE4500F40E0B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +179,6 @@
 		5E77F9362753B23100D506AA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				5E0CC0E82739511400F04773 /* Models */,
 				5E77F93B2753B7E300D506AA /* SetTimerScene */,
 			);
 			path = Presentation;
@@ -370,9 +356,7 @@
 				5E96AAB82734EE1A001F71F9 /* TimerEntity.swift in Sources */,
 				5E57464926B310C6000840D3 /* AppDelegate.swift in Sources */,
 				5E1541EB2740FD0400EC2886 /* AddableTimerRepository.swift in Sources */,
-				5E0CC0EA2739512F00F04773 /* TimerRequestModel.swift in Sources */,
 				5E446294274E7FA50068B62C /* CoreDataUpdatableTimerRepository.swift in Sources */,
-				5E25C815273965E700920848 /* TimerResponseModel.swift in Sources */,
 				5E0FFB94273C277000B35B45 /* UpdatableTimerInteractor.swift in Sources */,
 				5E57464B26B310C6000840D3 /* SceneDelegate.swift in Sources */,
 				5E446292274E7F0B0068B62C /* UpdatableTimerRepository.swift in Sources */,
