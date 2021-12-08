@@ -45,7 +45,7 @@ class ChangeTimerActionInteractorTests: XCTestCase {
         
         let repository = CoreDataChangeTimerRepository(coreDataManager: TestCoreDataManager().create())
         
-        let sut = ChangeTimerActionInteractorImplementation(repository: repository)
+        let sut = UpdatableTimerInteractor(repository: repository)
         
         sut.execute(requestParameter: request) { result in
             switch result {
