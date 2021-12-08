@@ -21,7 +21,10 @@ protocol UpdatableInteractor {
     func update(_ request: Request, completion: @escaping UpdatableInteractorCompletion)
 }
 
-final class UpdatableTimerInteractor {
+final class UpdatableTimerInteractor: UpdatableInteractor {
+    
+    typealias Request = TimerEntity
+    typealias Response = TimerEntity
     
     private let repository: UpdatableTimerRepository
     
@@ -29,8 +32,8 @@ final class UpdatableTimerInteractor {
         self.repository = repository
     }
     
-    func execute(requestParameter: TimerRequest,
-                 completion: @escaping(Result<TimerResponse, Error>) -> Void) {
+    func update(_ request: Request,
+                 completion: @escaping UpdatableInteractorCompletion) {
         
         do {
             try TimerEntityValidation().validate(requestParameter)
