@@ -9,7 +9,7 @@ import Foundation
 
 enum UpdatableInteractorError: Error {
     case invalidState
-    case unknown
+    case repositoryError
 }
 
 protocol UpdatableInteractor {
