@@ -8,6 +8,7 @@
 import Foundation
 
 protocol UpdatableTimerRepository {
-    func execute(timer: TimerEntity,
-                 completion: @escaping (Result<TimerEntity, Error>) -> Void)
+    
+    typealias UpdatableTimerRepositoryCompletion = (Result<TimerEntity, Error>) -> Void
+    func execute(timer: TimerEntity, completion: @escaping UpdatableTimerRepositoryCompletion)
 }
