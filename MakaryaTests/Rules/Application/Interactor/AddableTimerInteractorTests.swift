@@ -12,12 +12,12 @@ class AddableTimerInteractorTests: XCTestCase {
 
     func testAddTimer_WhenInformationProvided_TimerInStartedState() {
        
-        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "")
+        let request = TimerEntity(clock: ClockValueObject(hours: 1, minutes: 0, seconds: 0), date: Date())
         
         attemptSetTimer(request: request) { result in
             switch result {
             case .success(let timer):
-                XCTAssertEqual(timer.state, "started")
+                XCTAssertEqual(timer.state.rawValue, "started")
             case .failure(let error):
                 XCTFail("Should return a timer, reason: \(error.localizedDescription)")
             }
@@ -26,14 +26,14 @@ class AddableTimerInteractorTests: XCTestCase {
     
     func testAddTimer_WhenWrongInformationProvided_ReturnsAnError() {
         
-        let request = TimerRequestModel(hours: 27, minutes: 0, seconds: 0, date: Date(), state: "")
+        let request = TimerEntity(clock: ClockValueObject(hours: 27, minutes: 0, seconds: 0), date: Date())
         
         attemptSetTimer(request: request) { result in
             switch result {
             case .success(_):
                 XCTFail("It should fail instead of returns an object.")
             case .failure(let error):
-                XCTAssertEqual(error as? ClockValueObjectValidation.ClockValueObjectError, .invalidHours)
+                XCTAssertEqual(error as? AddableInteractorError, .invalidHours)
             }
         }
     }
