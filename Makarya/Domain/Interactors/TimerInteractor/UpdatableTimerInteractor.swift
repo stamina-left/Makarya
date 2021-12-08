@@ -39,5 +39,26 @@ final class UpdatableTimerInteractor: UpdatableInteractor {
         guard TimerState.allCases.contains(where: { $0.rawValue == request.state.rawValue }) else {
             return completion(.failure(.invalidState))
         }
+        
+//        do {
+//            try TimerEntityValidation().validate(requestParameter)
+//
+//            let clock = ClockValueObject(hours: requestParameter.hours, minutes: requestParameter.minutes, seconds: requestParameter.seconds)
+//            var timer = TimerEntity(clock: clock, date: requestParameter.date)
+//
+//            timer.state = TimerState(rawValue: requestParameter.state)!
+//
+//            repository.execute(timer: timer) { result in
+//                switch result {
+//                case .success(let timerResult):
+//                    let response = TimerResponseModel(timer: timerResult)
+//                    completion(.success(response))
+//                case .failure(let error):
+//                    completion(.failure(error))
+//                }
+//            }
+//        } catch {
+//            completion(.failure(error))
+//        }
     }
 }
