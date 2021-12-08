@@ -12,12 +12,14 @@ class UpdatableTimerInteractorTests: XCTestCase {
 
     func testChangeTimerAction_WhenActionProvided_TimerChangedIntoCorrectState() {
         
-        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "paused")
+        var request = TimerEntity(clock: ClockValueObject(hours: 1, minutes: 0, seconds: 0), date: Date())
+        
+        request.state = .paused
             
         attemptChangeTimer(request: request) { result in
             switch result {
             case .success(let timer):
-                XCTAssertEqual(timer.state, "paused")
+                XCTAssertEqual(timer.state.rawValue, "paused")
             case .failure(let error):
                 XCTFail("Should return a timer response model, reason \(error.localizedDescription)")
             }
