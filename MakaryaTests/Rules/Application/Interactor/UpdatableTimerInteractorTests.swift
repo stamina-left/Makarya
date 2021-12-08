@@ -26,20 +26,6 @@ class UpdatableTimerInteractorTests: XCTestCase {
         }
     }
     
-    func testChangeTimerAction_WhenWrongActionProvided_ReturnsAnError() {
-        
-        let request = TimerRequestModel(hours: 1, minutes: 0, seconds: 0, date: Date(), state: "undying")
-        
-        attemptChangeTimer(request: request) { result in
-            switch result {
-            case .success(_):
-                XCTFail("It should fail instead of returns an object.")
-            case .failure(let error):
-                XCTAssertEqual(error as? TimerEntityValidation.TimerEntityError, .invalidState)
-            }
-        }
-    }
-    
     // MARK: - Helpers
 
     func attemptChangeTimer(request: TimerEntity,
