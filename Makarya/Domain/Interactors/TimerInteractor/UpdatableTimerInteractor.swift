@@ -8,7 +8,7 @@
 import Foundation
 
 enum UpdatableInteractorError: Error {
-    case invalid
+    case invalidState
     case unknown
 }
 
