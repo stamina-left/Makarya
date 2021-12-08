@@ -31,15 +31,12 @@ final class CoreDataUpdatableTimerRepository: UpdatableTimerRepository {
         cdTimer.date = Date()
         cdTimer.state = timer.state.rawValue
         
-        // Update changes
         do {
+            // Update changes
             try coreDataManager.managedObjectContext.save()
+            // WARN: No completion success.
         } catch {
             completion(.failure(error))
         }
-        
-        // Convert Timer CoreData to TimerEntity
-        // or just return the request parameter
-        completion(.success(timer))
     }
 }
