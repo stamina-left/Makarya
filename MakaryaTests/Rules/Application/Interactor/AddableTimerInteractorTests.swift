@@ -14,7 +14,7 @@ class AddableTimerInteractorTests: XCTestCase {
        
         let request = TimerEntity(clock: ClockValueObject(hours: 1, minutes: 0, seconds: 0), date: Date())
         
-        attemptSetTimer(request: request) { result in
+        attemptAddTimer(request: request) { result in
             switch result {
             case .success(let timer):
                 XCTAssertEqual(timer.state.rawValue, "started")
@@ -28,7 +28,7 @@ class AddableTimerInteractorTests: XCTestCase {
         
         let request = TimerEntity(clock: ClockValueObject(hours: 27, minutes: 0, seconds: 0), date: Date())
         
-        attemptSetTimer(request: request) { result in
+        attemptAddTimer(request: request) { result in
             switch result {
             case .success(_):
                 XCTFail("It should fail instead of returns an object.")
@@ -40,7 +40,7 @@ class AddableTimerInteractorTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func attemptSetTimer(request: TimerEntity,
+    private func attemptAddTimer(request: TimerEntity,
                          completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         let repository = CoreDataAddableTimerRepository(coreDataManager: TestCoreDataManager().create())
