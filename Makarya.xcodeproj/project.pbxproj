@@ -150,23 +150,6 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		5E5CA2DC26FCB28600FBEB6E /* Rules */ = {
-			isa = PBXGroup;
-			children = (
-				5E5CA2DD26FCB2CE00FBEB6E /* Application */,
-			);
-			path = Rules;
-			sourceTree = "<group>";
-		};
-		5E5CA2DD26FCB2CE00FBEB6E /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				5E8FA09A274AD2DB003052E3 /* Helpers */,
-				5E5CA2DE26FCB2D700FBEB6E /* Interactor */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
 		5E5CA2DE26FCB2D700FBEB6E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +222,8 @@
 		5EF712B126E2558F0094349F /* MakaryaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E5CA2DC26FCB28600FBEB6E /* Rules */,
+				5E8FA09A274AD2DB003052E3 /* Helpers */,
+				5E5CA2DE26FCB2D700FBEB6E /* Interactor */,
 				5EF712B426E2558F0094349F /* Info.plist */,
 			);
 			path = MakaryaTests;
