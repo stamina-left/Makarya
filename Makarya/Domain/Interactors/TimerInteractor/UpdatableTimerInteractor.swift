@@ -7,7 +7,21 @@
 
 import Foundation
 
-final class ChangeTimerActionInteractorImplementation {
+enum UpdatableInteractorError: Error {
+    case invalid
+    case unknown
+}
+
+protocol UpdatableInteractor {
+    
+    associatedtype Request
+    associatedtype Response
+    
+    typealias UpdatableInteractorCompletion = (Result<Response, UpdatableInteractorError>) -> Void
+    func update(_ request: Request, completion: @escaping UpdatableInteractorCompletion)
+}
+
+final class UpdatableTimerInteractor {
     
     private let repository: ChangeTimerRepository
     
