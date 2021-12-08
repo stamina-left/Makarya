@@ -40,17 +40,17 @@ class AddableTimerInteractorTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func attemptSetTimer(request: TimerRequestModel,
-                         completion: @escaping (Result<TimerResponse, Error>) -> Void) {
+    private func attemptSetTimer(request: TimerEntity,
+                         completion: @escaping (Result<TimerEntity, Error>) -> Void) {
         
         let repository = CoreDataAddableTimerRepository(coreDataManager: TestCoreDataManager().create())
         
-        let sut = AddableTimerInteractor(repository: repository, presenter: <#T##AddableTimerPresenter#>)
+        let sut = AddableTimerInteractor(repository: repository)
         
-        sut.execute(request: request) { result in
+        sut.add(request) { result in
             switch result {
-            case .success(let timer):
-                completion(.success(timer))
+            case .success(let response):
+                completion(.success(response))
             case .failure(let error):
                 completion(.failure(error))
             }
