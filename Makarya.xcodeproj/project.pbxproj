@@ -144,8 +144,8 @@
 		5E5CA2DB26FCB1A400FBEB6E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5EF712AB26E2547A0094349F /* Entities */,
-				5E77F9372753B28900D506AA /* Interactors */,
+				5EF712AB26E2547A0094349F /* Entity */,
+				5E77F9372753B28900D506AA /* Interactor */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -167,12 +167,12 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		5E77F9372753B28900D506AA /* Interactors */ = {
+		5E77F9372753B28900D506AA /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				5EC7ABC72732ED3400A6639F /* TimerInteractor */,
 			);
-			path = Interactors;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		5E77F93B2753B7E300D506AA /* SetTimerScene */ = {
@@ -181,6 +181,13 @@
 				5EB3E7BC275F85C900A3F043 /* TimerPresenter.swift */,
 			);
 			path = SetTimerScene;
+			sourceTree = "<group>";
+		};
+		5E7F91D02768949300685BCD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		5E8CC446273ED37B00112BD5 /* Repositories */ = {
@@ -210,18 +217,19 @@
 			path = TimerInteractor;
 			sourceTree = "<group>";
 		};
-		5EF712AB26E2547A0094349F /* Entities */ = {
+		5EF712AB26E2547A0094349F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				5EC7ABCF273310CA00A6639F /* ClockValueObject.swift */,
 				5E96AAB72734EE1A001F71F9 /* TimerEntity.swift */,
 			);
-			path = Entities;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		5EF712B126E2558F0094349F /* MakaryaTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E7F91D02768949300685BCD /* Entity */,
 				5E8FA09A274AD2DB003052E3 /* Helpers */,
 				5E5CA2DE26FCB2D700FBEB6E /* Interactor */,
 				5EF712B426E2558F0094349F /* Info.plist */,
