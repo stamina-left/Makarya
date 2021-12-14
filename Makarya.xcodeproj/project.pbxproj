@@ -20,6 +20,7 @@
 		5E57465026B310C6000840D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57464E26B310C6000840D3 /* Main.storyboard */; };
 		5E57465226B310C7000840D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465126B310C7000840D3 /* Assets.xcassets */; };
 		5E57465526B310C7000840D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E57465326B310C7000840D3 /* LaunchScreen.storyboard */; };
+		5E7F91D22768950B00685BCD /* TimerEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7F91D12768950B00685BCD /* TimerEntityTests.swift */; };
 		5E86C5C126F1F1CC0053900F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E86C5C026F1F1CC0053900F /* README.md */; };
 		5E8FA09C274AD2F3003052E3 /* TestCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8FA09B274AD2F3003052E3 /* TestCoreDataManager.swift */; };
 		5E96363127481851004758E9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E96363027481851004758E9 /* CoreDataManager.swift */; };
@@ -56,6 +57,7 @@
 		5E57465126B310C7000840D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E57465426B310C7000840D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E57465626B310C7000840D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7F91D12768950B00685BCD /* TimerEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntityTests.swift; sourceTree = "<group>"; };
 		5E86C5C026F1F1CC0053900F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5E8FA09B274AD2F3003052E3 /* TestCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataManager.swift; sourceTree = "<group>"; };
 		5E96363027481851004758E9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		5E7F91D02768949300685BCD /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				5E7F91D12768950B00685BCD /* TimerEntityTests.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			files = (
 				5E1E7B7E273D8A6A004DCD4B /* UpdatableTimerInteractorTests.swift in Sources */,
 				5E8FA09C274AD2F3003052E3 /* TestCoreDataManager.swift in Sources */,
+				5E7F91D22768950B00685BCD /* TimerEntityTests.swift in Sources */,
 				5E96AAB42734DC81001F71F9 /* AddableTimerInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
